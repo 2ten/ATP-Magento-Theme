@@ -1,17 +1,17 @@
 
+// Grays
+// -------------------------
+$gray: #555 !default;
+$grayDarker: #222 !default;
+
 // Accent colors
 // ----------------------------
-$blue:                  #049cdb !default;
-$violetish:             #a582bb !default;
-$fucsy:                 #cb1c79 !default;
-$blueDark:              #0064cd !default;
-$green:                 #46a546 !default;
-$red:                   #9d261d !default;
-$yellow:                #ffc40d !default;
-$orange:                #f89406 !default;
-$pink:                  #c3325f !default;
-$purple:                #7a43b6 !default;
+$violetish: #a582bb !default;
+$fucsy: #cb1c79 !default;
 
+// Scaffolding
+// -------------------------
+$textColor: $gray !default;
 
 // Links
 // -------------------------
@@ -20,13 +20,17 @@ $linkColorHover:        darken($linkColor, 15%) !default;
 
 // Typography
 // -------------------------
-$sansFontFamily: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$sansFontFamily: "nimbus-sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $serifFontFamily: "acta-display", "Times New Roman", Times, serif !default;
 
-$baseFontSize:          12px !default;
-$baseFontFamily:        $sansFontFamily !default;
-$baseLineHeight:        18px !default;
-$altFontFamily:         $serifFontFamily !default;
+$baseFontSize: 14px !default;
+$baseFontFamily: $sansFontFamily !default;
+$baseLineHeight: 20px !default;
+$altFontFamily: $serifFontFamily !default;
+
+$headingsFontFamily: $serifFontFamily !default;
+$headingsFontWeight: normal !default;
+$headingsColor: $grayDarker !default;
 
 // Core variables and mixins
 @import "bootstrap/variables";
@@ -48,15 +52,15 @@ $altFontFamily:         $serifFontFamily !default;
 
 // Components: common
 //@import "bootstrap/sprites";
-//@import "bootstrap/dropdowns";
+@import "bootstrap/dropdowns";
 //@import "bootstrap/wells";
 //@import "bootstrap/component-animations";
 //@import "bootstrap/close";
 
 // Components: Buttons & Alerts
-//@import "bootstrap/buttons";
-//@import "bootstrap/button-groups";
-//@import "bootstrap/alerts"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+@import "bootstrap/buttons";
+@import "bootstrap/button-groups";
+@import "bootstrap/alerts"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
 
 // Components: Nav
 @import "bootstrap/navs";
@@ -83,3 +87,8 @@ $altFontFamily:         $serifFontFamily !default;
 
 // Include responsive Bootstrap styles
 // @import "bootstrap-responsive";
+
+
+@import "compass/layout";
+
+@import "custom";
