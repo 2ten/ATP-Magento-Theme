@@ -1,0 +1,324 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #fff;
+}
+
+h1, h2, h3 {
+  font-style: italic;
+}
+
+#page-root {
+  min-height: 100%;
+}
+
+#page-header {
+  padding-top: 0;
+  position: relative;
+  margin-bottom: 0px;
+  border-top: 0px solid #e3e3e3;
+  border-bottom: 0px solid #D4D4D4;
+  background-image:url(../images/store_tabs_background.png);
+  background-repeat:repeat-x;
+  background-position:left top;
+  .header-content {
+    margin-left: 20px;
+    .logo-container {
+      margin-left: 0;
+    }
+  }
+}
+
+.page-content-wrapper {
+  padding-top: 10px;
+  padding-bottom: 200px;
+}
+
+.logo-container {
+  margin-bottom: 10px;
+  margin-top: 24px;
+  height: 100px;
+  position: relative;
+  strong {
+    display: block;
+    position: absolute;
+    width: 51px;
+    height: 50px;
+    top: 0;
+    left: 178px;
+    text-indent: -999em;
+    background-position: 0 -765px;
+  }
+}
+
+.logo {
+  margin: 0;
+}
+
+.header-alternate {
+  padding-top: 75px;
+  position: relative;
+
+  ul,
+  ul li {
+    list-style: none;
+  }
+
+  .top-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 490px;
+  }
+
+  .alternate-block {
+    float: left;
+    padding-left: 80px;
+    position: relative;
+    // TODO: nope, this gotta be showed somewhere later
+    &.best-gifts{
+      display:none;
+    }
+    .block-title {
+      font-style: italic;
+      position: absolute;
+      width: 70px;
+      left: 0;
+      top: 0;
+      text-align: right;
+    }
+    .block-content {
+      padding: 0 10px;
+      background: transparent url(../images/gradient-line.png) 0 5px no-repeat;
+      min-height: 65px;
+      ul {
+        margin: 0;
+      }
+    }
+
+  }
+
+}
+
+/*
+#site-navbar {
+  margin-bottom: -2px;
+  border-bottom:#e5e5e5 1px solid;
+  .navbar-inner {
+    .border-radius(4px 4px 0 0);
+    .box-shadow(0 -1px 4px rgba(0,0,0,.065));
+	padding:0
+  }
+}
+*/
+
+#search_mini_form {
+  margin-top: 2px;
+  .search-query {
+    font-size: 12px;
+    height: 16px;
+  }
+}
+
+
+#page-footer {
+  font-size: 12px;
+  background: #fff;
+  border-top: 0px solid #D4D4D4;
+  position: relative;
+  margin-top: -200px;
+  height: 199px;
+  clear: both;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      display:inline;
+    }
+  }
+}
+
+
+/* Sprites */
+.logo-container strong,
+.best-gifts .block-title {
+  background-image: url(../images/sprites-header.png);
+}
+
+
+/* Alternate Blocks */
+.header-alternate .links {
+  list-style: none;
+  text-align: right;
+  margin: 5px 0 10px;
+  clear: both;
+  li {
+    display: inline;
+    text-transform: none;
+    font-size: 14px;
+    padding-left: 10px;
+    a {
+      color: #222;
+      font-size:11px;
+      &:hover,
+      &:active,
+      &.active {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+// @TODO: gotta use sprites here
+.store-switcher {
+  width: 200px;
+  ul {
+    height: 62px;
+    width: 400px;
+    overflow: hidden;
+  }
+  li {
+    display: block;
+    float: left;
+    width: 188px;
+    padding-left: 6px;
+    margin-left: 3px;
+    background-position: left top;
+    background-repeat: no-repeat;
+
+    &.selected {
+      display: block;
+     a { background-image: url(../images/store_tabs_r.png); }
+    }
+
+    a {
+      //font-family: @serifFontFamily;
+      //font-style: italic;
+      font-size: 14px;
+      line-height: 16px;
+      display: block;
+      color: #555;
+      padding-right: 6px;
+      background-position: right top;
+      background-repeat: no-repeat;
+
+      &:hover {
+        text-decoration: none;
+	background-image:url(../images/store_tabs_r.png);
+      }
+
+      span {
+        display: block;
+	padding-top: 18px;
+	padding-left: 75px;
+	padding-right: 10px;
+	height: 50px;
+	background-repeat: no-repeat;
+	background-position: 6px top;
+      }
+    }
+
+    &.store-1 a span {
+      background-image:url(../images/jewelry-store-icon.png);
+    }
+
+    &.store-2 a span {
+      background-image:url(../images/ceramic-store-icon.png);
+    }
+
+    &.store-1.selected,
+    &.store-2.selected,
+    &.store-1:hover,
+    &.store-2:hover {
+      background-image:url(../images/store_tabs_l.png);
+    }
+  }
+}
+
+// @INTERNAL: Why just when js is enabled?
+.js .store-switcher li.selected a,
+.js .store-switcher li a:hover {
+  background-color:#fff
+}
+
+// @TODO: this should be moved from header scope
+.best-gifts {
+  .block-title {
+    background-position: 0 -322px;
+    text-indent: -999em;
+    display: block;
+    height: 65px;
+    span {
+      visibility: hidden;
+    }
+  }
+  li {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+}
+
+
+// ATP navbar
+// -------------------------
+.navbar-atp {
+
+  .navbar-inner {
+    background: none;
+    .border-radius(0);
+    .box-shadow(none);
+    border-width: 0 0 1px 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .dropdown-menu {
+    top: 85%;
+  }
+
+  .brand,
+  .nav > li > a {
+    text-shadow: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  .nav > li > a:focus,
+  .nav > li > a:hover {
+    background-color: transparent;
+  }
+
+  .nav .active > a,
+  .nav .active > a:hover,
+  .nav .active > a:focus {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+  }
+
+  // Dropdowns
+  .nav li.dropdown.open > .dropdown-toggle,
+  .nav li.dropdown.active > .dropdown-toggle,
+  .nav li.dropdown.open.active > .dropdown-toggle {
+    background-color: transparent;
+  }
+}
+

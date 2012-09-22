@@ -7,28 +7,30 @@
 <html lang="<?php echo $this->getLang() ?>">
   <head>
     <?php echo $this->getChildHtml('head') ?>
-    </head>
-  <body>
+  </head>
+
+  <body <?php echo $this->getBodyClass() ? 'class="' . trim($this->getBodyClass()) . '"' : '' ?>>
     <?php echo $this->getChildHtml('after_body_start') ?>
 
     <div class="page-root">
       <?php echo $this->getChildHtml('header') ?>
-      <div class="container">
-        <div class="content">
+      <div class="page-content-wrapper">
+        <div id="page-content" class="content container">
+
           <?php echo $this->getChildHtml('breadcrumbs') ?>
           <?php echo $this->getChildHtml('global_notices') ?>
           <?php echo $this->getChildHtml('global_messages') ?>
           <div class="row">
-            <div class="span10">
+            <div class="span10 main-content">
               <?php echo $this->getChildHtml('content') ?>
             </div>
-            <div class="span2">
+            <div class="span2 sidebar sidebar-right">
               <?php echo $this->getChildHtml('right') ?>
             </div>
           </div>
+
         </div>
       </div> <!-- /container -->
-      <div class="page-root-footer"></div>
     </div> <!-- /root -->
 
     <footer id="page-footer">

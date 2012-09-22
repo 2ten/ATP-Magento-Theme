@@ -9,7 +9,7 @@
     <reference name="root">
       <action method="addBodyClass"><classname>no-js</classname></action>
     </reference>
-
+<!--
     <reference name="top.links">
       <action method="removeLinkByUrl"><url helper="customer/getAccountUrl"/></action>
       <action method="removeLinkBlock"><blockName>wishlist_link</blockName></action>
@@ -22,6 +22,7 @@
 
       <action method="addLink" translate="label title" module="contacts" ifconfig="contacts/contacts/enabled"><label>Contact Us</label><url>contacts</url><title>Contact Us</title><prepare>true</prepare></action>
     </reference>
+-->
   </default>
 
   <store_default>

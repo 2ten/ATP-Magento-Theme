@@ -6,7 +6,7 @@
     <?php foreach ($this->getGroups() as $_group): ?>
     <?php $_classes = 'store-' . $_group->getId(); ?>
     <?php $_classes .= $_group->getId() == $this->getCurrentGroupId() ? ' selected' : '' ?>
-      <li class="<?php print $_classes ?>"><a href="<?php echo $_group->getHomeUrl() ?>"><?php echo $this->htmlEscape($_group->getName()) ?></a></li>
+      <li class="<?php print $_classes ?>"><a href="<?php echo $_group->getHomeUrl() ?>"><span><?php echo $this->htmlEscape($_group->getName()) ?></span></a></li>
     <?php endforeach; ?>
     </ul>
   </div>

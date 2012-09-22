@@ -60,6 +60,30 @@
 // ----------------------------
 @violetish: #a582bb;
 @fucsy: #cb1c79;
+@terra: #ed7f60;
+
+// Stores
+@defaultStoreLinkColor: @violetish;
+@defaultStoreLinkColorHover: darken(@defaultStoreLinkColor, 15%);
+
+@defaultCeramicsStoreLinkColor: @terra;
+@defaultCeramicsStoreLinkColorHover: darken(@terra, 15%);
+
+
+// Buttons
+// -------------------------
+@defaultStoreBtnPrimaryBackground: @defaultStoreLinkColor;
+@defaultStoreBtnPrimaryBackgroundHighlight: spin(@defaultStoreBtnPrimaryBackground, 20%);
+
+@defaultCeramicsStoreBtnPrimaryBackground: @defaultCeramicsStoreLinkColor;
+@defaultCeramicsStoreBtnPrimaryBackgroundHighlight: spin(@defaultCeramicsStoreBtnPrimaryBackground, 20%);
+
+@defaultStoreDropdownLinkBackgroundActive: @defaultStoreLinkColor;
+@defaultCeramicsStoreDropdownLinkBackgroundActive: @defaultCeramicsStoreLinkColor;
+
+@defaultStoreDropdownLinkBackgroundHover: @defaultStoreDropdownLinkBackgroundActive;
+@defaultCeramicsStoreDropdownLinkBackgroundHover: @defaultCeramicsStoreDropdownLinkBackgroundActive;
+
 
 // Scaffolding
 // -------------------------
@@ -67,8 +91,8 @@
 
 // Links
 // -------------------------
-@linkColor: @violetish;
-@linkColorHover: darken(@linkColor, 15%);
+//@linkColor: @violetish;
+//@linkColorHover: darken(@linkColor, 15%);
 
 // Typography
 // -------------------------
@@ -84,5 +108,6 @@
 @headingsFontWeight: normal;
 @headingsColor: @grayDarker;
 
+
 @import "custom";
-@import "catalog";
+@import "store-colors";
