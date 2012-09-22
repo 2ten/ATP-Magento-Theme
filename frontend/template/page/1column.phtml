@@ -7,20 +7,19 @@
 <html lang="<?php echo $this->getLang() ?>">
   <head>
     <?php echo $this->getChildHtml('head') ?>
-    </head>
-  <body>
+  </head>
+    <body <?php echo $this->getBodyClass() ? 'class="' . trim($this->getBodyClass()) . '"' : '' ?>>
     <?php echo $this->getChildHtml('after_body_start') ?>
     <div id="page-root">
       <?php echo $this->getChildHtml('header') ?>
-      <div class="container">
-        <div class="content">
+      <div class="page-content-wrapper">
+        <div id="page-content" class="content container">
           <?php echo $this->getChildHtml('breadcrumbs') ?>
           <?php echo $this->getChildHtml('global_notices') ?>
           <?php echo $this->getChildHtml('global_messages') ?>
           <?php echo $this->getChildHtml('content') ?>
         </div>
       </div>
-      <div id="page-root-footer"></div>
     </div> <!-- /container -->
 
     <footer id="page-footer">

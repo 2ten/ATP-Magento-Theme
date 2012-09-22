@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Atp_ThemeEnhacements>
+      <version>0.0.0.1</version>
+    </Atp_ThemeEnhacements>
+  </modules>
+
+	<frontend>
+		<layout>
+			<updates>
+				<atp_themeenhacements>
+					<file>atp_themeenhacements.xml</file>
+				</atp_themeenhacements>
+			</updates>
+		</layout>
+<!--
+    <routers>
+			<cms>
+        <args>
+					<modules>
+						<Atp_ThemeEnhacements before="Mage_Cms">Atp_ThemeEnhacements</Atp_ThemeEnhacements>
+					</modules>
+        </args>
+      </cms>
+    </routers>
+-->
+	</frontend>
+
+  <global>
+
+		<blocks>
+			<atp_themeenhacements>
+				<class>Atp_ThemeEnhacements_Block</class>
+			</atp_themeenhacements>
+			<page>
+				<rewrite>
+					<html_topmenu>Atp_ThemeEnhacements_Block_Topmenu</html_topmenu>
+				</rewrite>
+			</page>
+		</blocks>
+
+		<models>
+			<atp_themeenhacements>
+				<class>Atp_ThemeEnhacements_Model</class>
+			</atp_themeenhacements>
+		</models>
+<!--
+		<helpers>
+			<atp_themeenhacements>
+				<class>Atp_ThemeEnhacements_Helper</class>
+			</atp_themeenhacements>
+		</helpers>
+-->
+		<events>
+
+			<controller_action_layout_load_before>
+				<observers>
+					<atp_themeenhacements>'
+						<class>atp_themeenhacements/observer</class>
+						<method>appendStoreUpdate</method>
+					</atp_themeenhacements>
+				</observers>
+			</controller_action_layout_load_before>
+
+<!--
+			<page_block_html_topmenu_gethtml_after>
+				<observers>
+					<atp_themeenhacements>
+						<class>atp_themeenhacements/observer</class>
+						<method>afterTopMenuGetHtml</method>
+					</atp_themeenhacements>
+				</observers>
+			</page_block_html_topmenu_gethtml_after>
+-->
+		</events>
+	</global>
+</config>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Atp_ThemeEnhacements>
+			<active>true</active>
+			<codePool>local</codePool>
+			<depends>
+				<Mage_Page />
+				<Mage_Customer />
+			</depends>
+		</Atp_ThemeEnhacements>
+	</modules>
+</config>

@@ -1,0 +1,14 @@
+<?php if (count($this->getGroups())>1) : ?>
+<div class="store-switcher alternate-block">
+  <h4 class="block-title"><?php echo $this->__('Select Store:') ?></h4>
+  <div class="block-content">
+    <ul>
+    <?php foreach ($this->getGroups() as $_group): ?>
+    <?php $_classes = 'store-' . $_group->getId(); ?>
+    <?php $_classes .= $_group->getId() == $this->getCurrentGroupId() ? ' selected' : '' ?>
+      <li class="<?php print $_classes ?>"><a href="<?php echo $_group->getHomeUrl() ?>"><?php echo $this->htmlEscape($_group->getName()) ?></a></li>
+    <?php endforeach; ?>
+    </ul>
+  </div>
+</div>
+<?php endif; ?>

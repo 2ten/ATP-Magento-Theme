@@ -1,2 +1,9 @@
 skin skin/frontend/default/atp
 frontend app/design/frontend/default/atp
+modules/Atp app/code/local/Atp
+modules/Atp_ThemeEnhacements.xml app/etc/modules/Atp_ThemeEnhacements.xml
+modules/layout/atp_themeenhacements.xml app/design/frontend/base/default/layout/atp_themeenhacements.xml
+modules/Atp_StoreSelector.xml app/etc/modules/Atp_StoreSelector.xml
+modules/layout/atp_storeselector.xml app/design/frontend/base/default/layout/atp_storeselector.xml
+modules/template/atp_storeselector app/design/frontend/base/default/template/atp_storeselector
+modules/skin/atp_storeselector skin/frontend/base/default/atp_storeselector

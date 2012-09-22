@@ -1,0 +1,1 @@
+watch( 'less/.*\.less' )  {|md| system("/home/jardmell/bin/lessc less/styles.less > css/styles.css") }

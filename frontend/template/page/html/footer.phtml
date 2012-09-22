@@ -1,2 +1,12 @@
-<?php echo $this->getChildHtml() ?>
-<address><?php echo $this->getCopyright() ?></address>
+<div class="row">
+  <div class="span3">
+    <?php echo $this->getChildHtml('store_switcher') ?>
+  </div>
+  <div class="span6">
+    <?php echo $this->getChildHtml('cms_footer_links'); ?>
+    <?php echo $this->getChildHtml('footer_links') ?>
+  </div>
+  <div class="span3">
+    <address><?php echo $this->getCopyright() ?></address>
+  </div>
+</div>

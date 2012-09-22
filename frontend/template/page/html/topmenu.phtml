@@ -1,0 +1,7 @@
+<?php $_menu = $this->getHtml('level-top') ?>
+<?php if($_menu): ?>
+  <a style="display:none" class="brand" href="#"><?php print $this->getBrandName(); ?></a>
+  <ul id="nav" class="nav">
+    <?php echo $_menu ?>
+  </ul>
+<?php endif ?>

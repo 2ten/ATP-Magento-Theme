@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+
+-->
+<layout version="0.1.0">
+
+  <default>
+    <reference name="head">
+      <action method="addItem"><type>skin_js</type><name>atp_storeselector/selector.js</name></action>
+    </reference>
+
+    <reference name="footer">
+      <remove name="store_switcher" />
+    </reference>
+
+    <reference name="top.container">
+      <block type="cms/block" name="best_gifts" before="-">
+        <action method="setBlockId"><block_id>best-gifts</block_id></action>
+      </block>
+
+      <block type="page/switch" name="top_store_switcher" as="store_switcher" template="atp_storeselector/switch/stores.phtml"/>
+    </reference>
+  </default>
+
+</layout>
