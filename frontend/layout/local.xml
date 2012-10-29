@@ -67,7 +67,7 @@
         <action method="setText">
           <text><![CDATA[
           <div id="maintainance-notice" class="alert alert-error">
-            Our store is currently under maintainance. No orders will be fulfilled at this time, please excuse us.
+            Our store is currently under maintainance. Orders won't be fulfilled at this time, please excuse us.
           </div>
           ]]></text>
         </action>
