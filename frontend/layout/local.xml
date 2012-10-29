@@ -27,6 +27,7 @@
     </reference>
 
     <reference name="head">
+<!--
       <block type="core/text" name="typekit-embed">
         <action method="setText">
           <text><![CDATA[
@@ -34,6 +35,7 @@
                 rel='stylesheet' type='text/css'>
           ]]></text>
         </action>
+-->
       </block>
 
       <action method="addItem"><type>skin_js</type><name>bootstrap/js/bootstrap-dropdown.js</name></action>
