@@ -8,24 +8,30 @@
     <remove name="right.permanent.callout" />
     <remove name="right.poll" />
     <remove name="left.newsletter" />
-    <!-- <remove name="catalog.compare.sidebar" /> -->
+    <remove name="catalog.compare.sidebar" />
     <remove name="paypal.partner.right.logo" />
-    <!-- <remove name="cart_sidebar" /> -->
+    <remove name="cart_sidebar" />
     <remove name="left.reports.product.viewed" />
     <remove name="right.reports.product.viewed" />
     <remove name="right.reports.product.compared" />
+    <remove name="footer_links" />
 
-
-    <reference name="right">
-      <block type="newsletter/subscribe" name="right.newsletter" template="newsletter/subscribe.phtml"/>
+    <reference name="footer">
+      <block type="core/template" name="footer_side" template="page/html/footer-side.phtml">
+        <block type="newsletter/subscribe" name="bottom.newsletter"
+      template="newsletter/subscribe.phtml" />
+        <block type="cms/block" name="connect_links">
+          <action method="setBlockId"><block_id>follow-us-footer</block_id></action>
+        </block>
+      </block>
     </reference>
 
     <reference name="head">
       <block type="core/text" name="typekit-embed">
         <action method="setText">
           <text><![CDATA[
-          <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-          <script type="text/javascript" src="//use.typekit.net/nfb5aoz.js"></script>
+          <link href='http://fonts.googleapis.com/css?family=Oxygen|Crimson+Text:400,400italic'
+                rel='stylesheet' type='text/css'>
           ]]></text>
         </action>
       </block>
@@ -34,9 +40,46 @@
       <action method="addItem"><type>skin_js</type><name>js/theme.js</name></action>
 
       <!-- <action method="addItem"><type>skin_js</type><name>lib/html5shiv/src/html5shiv.js</name><params/><if>lt IE 9</if></action> -->
+<!-- account.less
+
+@import "fonts";
+@import "global";
+@import "misc";
+@import "products";
+@import "cart";
+@import "account";
+@import "form-lists";
+@import "store-colors";
+
+-->
       <action method="addCss"><stylesheet>css/styles.css</stylesheet></action>
+      <action method="addCss"><stylesheet>css/global.css</stylesheet></action>
+      <action method="addCss"><stylesheet>css/misc.css</stylesheet></action>
+      <action method="addCss"><stylesheet>css/products.css</stylesheet></action>
+      <action method="addCss"><stylesheet>css/cart.css</stylesheet></action>
+      <action method="addCss"><stylesheet>css/account.css</stylesheet></action>
+      <action method="addCss"><stylesheet>css/form-lists.css</stylesheet></action>
+      <action method="addCss"><stylesheet>css/store-colors.css</stylesheet></action>
     </reference>
 
   </default>
+
+
+  <catalog_category_default>
+    <update handle="page_two_columns_left" />
+    <reference name="product_list">
+      <action method="setColumnCount"><columns>4</columns></action>
+    </reference>
+  </catalog_category_default>
+
+  <catalog_category_layered>
+    <update handle="page_two_columns_left" />
+    <reference name="product_list">
+      <action method="setColumnCount"><columns>4</columns></action>
+
+      <!--<update handle="two_columns_left" />-->
+    </reference>
+  </catalog_category_layered>
+
 
 </layout>

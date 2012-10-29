@@ -5,9 +5,17 @@
 <layout version="0.1.0">
 
   <default>
-
     <reference name="root">
       <action method="addBodyClass"><classname>no-js</classname></action>
+    </reference>
+
+    <reference name="wishlist_link">
+      <action method="setBeforeText"><beforeText><![CDATA[<i class="icon-heart"></i> ]]></beforeText></action>
+    </reference>
+
+    <reference name="top.links">
+      <action method="removeLinkByUrl"><url helper="customer/getAccountUrl"/></action>
+      <action method="addLink" translate="label title" module="customer"><label>My Account</label><url helper="customer/getAccountUrl"/><title>My Account</title><prepare/><urlParams/><position>10</position><liParams/><aParams/><beforeText><![CDATA[<i class="icon-user"></i> ]]></beforeText></action>
     </reference>
 <!--
     <reference name="top.links">
@@ -20,22 +28,98 @@
       </block>
       <action method="addLinkBlock"><blockName>cms_top_links</blockName></action>
 
-      <action method="addLink" translate="label title" module="contacts" ifconfig="contacts/contacts/enabled"><label>Contact Us</label><url>contacts</url><title>Contact Us</title><prepare>true</prepare></action>
+      <action method="addLink" translate="label title"
+  module="contacts"
+  ifconfig="contacts/contacts/enabled"><label>Contact
+  Us</label><url>contacts</url><title>Contact Us</title><prepare>true</prepare></action>
     </reference>
 -->
   </default>
 
-  <store_default>
-    <reference name="root">
-      <action method="addBodyClass"><classname>store-default</classname></action>
+  <cms_index_index>
+    <reference name="content">
+      <block type="core/template" name="home_callouts" template="callouts/home.phtml"/>
     </reference>
-  </store_default>
+  </cms_index_index>
 
-  <store_default_ceramics>
+  <STORE_jewerly>
     <reference name="root">
-      <action method="addBodyClass"><classname>store-default-ceramics</classname></action>
+      <action method="addBodyClass"><classname>store-jewerly</classname></action>
     </reference>
-  </store_default_ceramics>
+    <reference name="header">
+      <block type="core/text" name="storeTagline">
+        <action method="setText">
+          <text><![CDATA[
+          <h4>Jewerly & Accesories</h4>
+          ]]></text>
+        </action>
+      </block>
+    </reference>
+    <reference name="footer">
+      <block type="cms/block" name="closure_links" before="-">
+        <action method="setBlockId"><block_id>jewerly_closure_links</block_id></action>
+      </block>
+    </reference>
+  </STORE_jewerly>
+
+  <STORE_jewerly_cms_index_index>
+    <reference name="home_callouts">
+      <block type="cms/block" name="home-callout-1">
+        <action method="setBlockId"><block_id>home-callout-1</block_id></action>
+      </block>
+      <block type="cms/block" name="home-best-gifts">
+        <action method="setBlockId"><block_id>home-best-gifts</block_id></action>
+      </block>
+      <block type="cms/block" name="home-callout-3">
+        <action method="setBlockId"><block_id>home-callout-3</block_id></action>
+      </block>
+    </reference>
+  </STORE_jewerly_cms_index_index>
+
+  <STORE_ceramics>
+    <reference name="root">
+      <action method="addBodyClass"><classname>store-ceramics</classname></action>
+    </reference>
+    <reference name="header">
+      <block type="core/text" name="storeTagline">
+        <action method="setText">
+          <text><![CDATA[
+          <h4>Pre-Columbian Ceramic Reproductions</h4>
+          ]]></text>
+        </action>
+      </block>
+    </reference>
+  </STORE_ceramics>
+
+  <STORE_ceramics_cms_index_index>
+    <reference name="home_callouts">
+      <block type="cms/block" name="home-callout-1">
+        <action method="setBlockId"><block_id>ceramics-home-callout-1</block_id></action>
+      </block>
+      <block type="cms/block" name="home-best-gifts">
+        <action method="setBlockId"><block_id>ceramics-home-best-gifts</block_id></action>
+      </block>
+      <block type="cms/block" name="home-callout-3">
+        <action method="setBlockId"><block_id>ceramics-home-callout-3</block_id></action>
+      </block>
+    </reference>
+  </STORE_ceramics_cms_index_index>
+
+  <STORE_ceramics_catalog_category_default>
+    <reference name="product_list">
+      <action method="setTemplate"><template>catalog/product/ceramics-list.phtml</template></action>
+    </reference>
+  </STORE_ceramics_catalog_category_default>
+  <STORE_ceramics_catalog_category_view>
+    <reference name="product_list">
+      <action method="setTemplate"><template>catalog/product/ceramics-list.phtml</template></action>
+    </reference>
+  </STORE_ceramics_catalog_category_view>
+  <STORE_ceramics_catalog_category_layered>
+    <reference name="product_list">
+      <action method="setTemplate"><template>catalog/product/ceramics-list.phtml</template></action>
+    </reference>
+  </STORE_ceramics_catalog_category_layered>
 
   <customer_logged_in>
     <reference name="top.links">
@@ -46,7 +130,21 @@
   <customer_logged_out>
     <reference name="top.links">
       <action method="removeLinkByUrl"><url helper="customer/getLoginUrl"/></action>
+      <action method="addLink" translate="label title" module="customer"><label>Log In</label><url helper="customer/getLoginUrl"/><title>Log In</title><prepare/><urlParams/><position>100</position><liParams/><aParams/><beforeText><![CDATA[<i class="icon-lock"></i> ]]></beforeText></action>
     </reference>
   </customer_logged_out>
+
+  <page_one_column>
+    <reference name="root">
+      <action method="addBodyClass"><classname>one-column</classname></action>
+    </reference>
+  </page_one_column>
+
+  <page_two_columns_left>
+    <reference name="root">
+      <action method="addBodyClass"><classname>two-columns-left</classname></action>
+    </reference>
+  </page_two_columns_left>
+
 
 </layout>

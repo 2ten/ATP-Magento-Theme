@@ -19,7 +19,7 @@ class Atp_StoreSelector_Model_Observer
     //$action = $observer->getEvent()->getAction();
     $page = $observer->getEvent()->getPage();
     $homePageId = Mage::getStoreConfig(Mage_Cms_Helper_Page::XML_PATH_HOME_PAGE);
-    xdebug_break();
+    //xdebug_break();
     if ($page->getIdentifier() != $homePageId) return;
 
     $params = Mage::registry('application_params');

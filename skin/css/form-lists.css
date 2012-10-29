@@ -1,0 +1,23 @@
+/* Form lists */
+/* Grouped fields */
+.form-list {
+  /* Customer */
+	margin: 0;
+	list-style:none
+}
+.form-list label {
+  font-weight: bold;
+  position: relative;
+  z-index: 0;
+  overflow:hidden
+}
+.form-list label em {
+	display:block;
+	float:left; margin:0 5px 0 0;
+	width:15px
+}
+
+
+
+/* Form Validation */
+/* Expiration date and CVV number validation fix */

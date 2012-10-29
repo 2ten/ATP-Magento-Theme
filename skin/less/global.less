@@ -1,3 +1,6 @@
+// Core variables and mixins
+@import "import.less";
+
 html {
   height: 100%;
 }
@@ -9,9 +12,70 @@ body {
   background-color: #fff;
 }
 
-h1, h2, h3 {
-  font-style: italic;
+h1, h2, h3, h4, h5 {
+  font-style: normal;
 }
+
+/* Tools */
+.hidden {
+  display:block !important;
+  border:0 !important;
+  margin:0 !important;
+  padding:0 !important;
+  font-size:0 a!important;
+  line-height:0 !important;
+  width:0 !important;
+  height:0 !important;
+  overflow:hidden !important;
+}
+.nobr {
+  white-space:nowrap !important;
+}
+.wrap {
+  white-space:normal !important;
+}
+.a-left {
+  text-align:left !important;
+}
+.a-center {
+  text-align:center !important;
+}
+.a-right {
+  text-align:right !important;
+}
+.v-top {
+  vertical-align:top;
+}
+.v-middle {
+  vertical-align:middle;
+}
+.f-left,
+.left {
+  float:left !important;
+}
+.f-right,
+.right {
+  float:right !important;
+}
+.f-none {
+  float:none !important;
+}
+.f-fix {
+  float:left; width:100%;
+}
+.no-display {
+  display:none;
+}
+.no-margin {
+  margin:0 !important;
+}
+.no-padding {
+  padding:0 !important;
+}
+.no-bg {
+  background:none !important;
+}
+
 
 #page-root {
   min-height: 100%;
@@ -73,9 +137,8 @@ h1, h2, h3 {
     position: absolute;
     top: 0;
     right: 0;
-    width: 490px;
-  }
 
+  }
   .alternate-block {
     float: left;
     padding-left: 80px;
@@ -93,8 +156,7 @@ h1, h2, h3 {
       text-align: right;
     }
     .block-content {
-      padding: 0 10px;
-      background: transparent url(../images/gradient-line.png) 0 5px no-repeat;
+      padding: 0 0;
       min-height: 65px;
       ul {
         margin: 0;
@@ -105,23 +167,28 @@ h1, h2, h3 {
 
 }
 
-/*
-#site-navbar {
-  margin-bottom: -2px;
-  border-bottom:#e5e5e5 1px solid;
-  .navbar-inner {
-    .border-radius(4px 4px 0 0);
-    .box-shadow(0 -1px 4px rgba(0,0,0,.065));
-	padding:0
-  }
-}
-*/
-
 #search_mini_form {
-  margin-top: 2px;
+  margin-top: 0px;
+  margin-right: -20px;
   .search-query {
     font-size: 12px;
     height: 16px;
+    width: 140px;
+    line-height: 16px;
+    padding-right: 30px;
+    .border-radius(3px);
+  }
+  .btn {
+    background: none;
+    padding: 4px 0;
+    line-height: 16px;
+    border: 0;
+    box-shadow: none;
+    left: -25px;
+    position:relative;
+    span {
+      display: none;
+    }
   }
 }
 
@@ -134,7 +201,7 @@ h1, h2, h3 {
   margin-top: -200px;
   height: 199px;
   clear: both;
-
+  text-align:center;
   ul {
     list-style: none;
     margin: 0;
@@ -143,6 +210,43 @@ h1, h2, h3 {
       display:inline;
     }
   }
+
+  .page-footer-content {
+    border-top:1px solid #D4D4D4
+  }
+
+  .span12 {
+    position: relative;
+  }
+
+  .block-subscribe {
+    .block-title {
+      display:none
+    }
+    .block-content {
+      padding: 0;
+    }
+    .form-subscribe-header label {
+      font-size:12px
+    }
+    .input-box {
+      width:140px;
+      float: left;
+      input {
+        width: 120px;
+         .border-radius(15px)
+      }
+    }
+    .actions {
+      float: left;
+      width:90px;
+      .btn {
+        font-size: 12px;
+        width: 84px;
+      }
+    }
+  }
+
 }
 
 
@@ -162,11 +266,18 @@ h1, h2, h3 {
   li {
     display: inline;
     text-transform: none;
-    font-size: 14px;
+    font-size: 12px;
+    text-transform: none;
     padding-left: 10px;
+    i {
+      opacity: 0.4;
+      margin-top: -1px;
+    }
+    &:hover i {
+      opacity: 0.8;
+    }
     a {
       color: #222;
-      font-size:11px;
       &:hover,
       &:active,
       &.active {
@@ -179,24 +290,28 @@ h1, h2, h3 {
 
 // @TODO: gotta use sprites here
 .store-switcher {
-  width: 200px;
+
   ul {
     height: 62px;
-    width: 400px;
+    width: 410px;
     overflow: hidden;
+    padding-right:8px;
+    margin-right:-8px;
   }
   li {
     display: block;
-    float: left;
-    width: 188px;
-    padding-left: 6px;
-    margin-left: 3px;
+    float: right;
+    width: 0px;    padding-left: 0;
+    margin-left: 0px;
     background-position: left top;
     background-repeat: no-repeat;
-
+    .box-shadow(0px 0px 8px rgba(0,0,0,.3));
+    position:relative;
+    z-index:1;
     &.selected {
       display: block;
-     a { background-image: url(../images/store_tabs_r.png); }
+      z-index:2;
+     a {  }
     }
 
     a {
@@ -206,23 +321,25 @@ h1, h2, h3 {
       line-height: 16px;
       display: block;
       color: #555;
-      padding-right: 6px;
+      padding-right: 0;
       background-position: right top;
       background-repeat: no-repeat;
-
-      &:hover {
+      background-color: #f1f1f1;
+      #gradient .vertical(#e2e0e0, #f1f1f1);
+      &:hover{
         text-decoration: none;
-	background-image:url(../images/store_tabs_r.png);
+        color:inherit;
+        background-color: #e2e0e0;
+         #gradient .vertical(#d4d3d3, #e2e0e0);
       }
-
       span {
         display: block;
-	padding-top: 18px;
-	padding-left: 75px;
-	padding-right: 10px;
-	height: 50px;
-	background-repeat: no-repeat;
-	background-position: 6px top;
+        padding-top: 14px;
+        padding-left: 80px;
+        padding-right: 10px;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-position: 6px top;
       }
     }
 
@@ -234,12 +351,18 @@ h1, h2, h3 {
       background-image:url(../images/ceramic-store-icon.png);
     }
 
-    &.store-1.selected,
-    &.store-2.selected,
-    &.store-1:hover,
-    &.store-2:hover {
-      background-image:url(../images/store_tabs_l.png);
+    &.store-1.selected a,
+    &.store-2.selected a {
+      background-color: #ffffff;
+      #gradient .vertical(#f1f1f1, #ffffff);
     }
+    &.store-1{
+      width:200px;
+    }
+    &.store-2{
+      width:200px;
+    }
+
   }
 }
 
@@ -269,6 +392,7 @@ h1, h2, h3 {
 .breadcrumb {
   background-color: transparent;
   padding: 0;
+  display: none
 }
 
 
@@ -280,26 +404,31 @@ h1, h2, h3 {
     background: none;
     .border-radius(0);
     .box-shadow(none);
-    border-width: 0 0 1px 0;
+    border-width: 0 0 0px 0;
     padding-left: 0;
     padding-right: 0;
   }
 
   .dropdown-menu {
     top: 85%;
+    a {
+      font-size: 13px;
+    }
   }
 
   .brand,
   .nav > li > a {
     text-shadow: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 12px;
-    letter-spacing: 0.02em;
+    font-weight: normal;
+    font-size: 14px;
     padding-left: 9px;
     padding-right: 9px;
   }
-
+  .nav > li > a > .caret {
+    margin-left: 7px;
+    margin-top: 10px !important;
+    opacity: .5;
+  }
   .nav > li > a:focus,
   .nav > li > a:hover {
     background-color: transparent;
@@ -320,5 +449,18 @@ h1, h2, h3 {
   .nav li.dropdown.open.active > .dropdown-toggle {
     background-color: transparent;
   }
+
+
+  .nav > li.level0 > a {
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weigth: bold
+  }
 }
 
+
+// Home
+// INTERNAL: Move away from global!!
+.cms-home .navbar-atp .navbar-inner {
+  border-bottom: 0;
+}

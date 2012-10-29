@@ -6,36 +6,36 @@
     </Atp_StoreSelector>
   </modules>
 
-	<frontend>
-		<layout>
-			<updates>
-				<atp_storeselector>
-					<file>atp_storeselector.xml</file>
-				</atp_storeselector>
-			</updates>
-		</layout>
+  <frontend>
+    <layout>
+      <updates>
+	<atp_storeselector>
+	  <file>atp_storeselector.xml</file>
+	</atp_storeselector>
+      </updates>
+    </layout>
   </frontend>
 
   <global>
-		<blocks>
-			<atp_storeselector>
-				<class>Atp_StoreSelector_Block</class>
-			</atp_storeselector>
-		</blocks>
-		<models>
-			<atp_storeselector>
-				<class>Atp_StoreSelector_Model</class>
-			</atp_storeselector>
-		</models>
-		<events>
-			<cms_page_render>
-				<observers>
-					<atp_storeselector>
-						<class>atp_storeselector/observer</class>
-						<method>checkHomePage</method>
-					</atp_storeselector>
-				</observers>
-			</cms_page_render>
-		</events>
-	</global>
+    <blocks>
+      <atp_storeselector>
+	<class>Atp_StoreSelector_Block</class>
+      </atp_storeselector>
+    </blocks>
+    <models>
+      <atp_storeselector>
+	<class>Atp_StoreSelector_Model</class>
+      </atp_storeselector>
+    </models>
+    <events>
+      <cms_page_render>
+	<observers>
+	  <atp_storeselector>
+	    <class>atp_storeselector/observer</class>
+	    <method>checkHomePage</method>
+	  </atp_storeselector>
+	</observers>
+      </cms_page_render>
+    </events>
+  </global>
 </config>

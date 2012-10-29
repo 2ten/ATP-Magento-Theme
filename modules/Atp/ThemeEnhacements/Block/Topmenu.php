@@ -40,7 +40,7 @@ class Atp_ThemeEnhacements_Block_Topmenu extends Mage_Page_Block_Html_Topmenu
 
             $outermostClassCode = '';
             $outermostClass = $menuTree->getOutermostClass();
-            $outermostClass .= $child->hasChildren() ? ' dropdown-toggle' : '';
+            //$outermostClass .= $child->hasChildren() ? ' dropdown-toggle' : '';
 
             if ($childLevel == 0 && $outermostClass) {
                 $outermostClassCode = ' class="' . $outermostClass . '" ';
@@ -50,18 +50,21 @@ class Atp_ThemeEnhacements_Block_Topmenu extends Mage_Page_Block_Html_Topmenu
             $href = $child->getUrl();
             $dropdownAttributes = '';
             $dropdownAfter = '';
+            /*
             if ($child->hasChildren()) {
               $dropdownAttributes = 'data-target="#" data-toggle="dropdown" ' ;
               $dropdownAfter = '<b class="caret"></b>';
             }
+            */
 
             $html .= '<li ' . $this->_getRenderedMenuItemAttributes($child) . '>';
             $html .= '<a href="' . $href . '" ' . $outermostClassCode . $dropdownAttributes .'>'
                 . $this->escapeHtml($child->getName()) . $dropdownAfter . '</a>';
 
             if ($child->hasChildren()) {
+              $html .= '<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>';
                 if (!empty($childrenWrapClass)) {
-                    $html .= '<div class="' . $childrenWrapClass . '">';
+                  $html .= '<div class="' . $childrenWrapClass . '">';
                 }
                 $html .= '<ul class="level' . $childLevel . ' dropdown-menu">';
                 $html .= $this->_getHtml($child, $childrenWrapClass);
@@ -112,6 +115,8 @@ class Atp_ThemeEnhacements_Block_Topmenu extends Mage_Page_Block_Html_Topmenu
         if ($item->hasChildren()) {
             $classes[] = 'parent dropdown';
         }
+
+        $classes[] = 'item-id-' . $item->getId();
 
         return $classes;
     }

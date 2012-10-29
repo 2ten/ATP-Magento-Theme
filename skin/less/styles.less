@@ -41,12 +41,12 @@
 //@import "../bootstrap/less/popovers.less";
 
 // Components: Misc
-@import "../bootstrap/less/thumbnails.less";
+//@import "../bootstrap/less/thumbnails.less";
 @import "../bootstrap/less/labels-badges.less";
 //@import "../bootstrap/less/progress-bars.less";
-@import "../bootstrap/less/accordion.less";
-@import "../bootstrap/less/carousel.less";
-@import "../bootstrap/less/hero-unit.less";
+//@import "../bootstrap/less/accordion.less";
+//@import "../bootstrap/less/carousel.less";
+//@import "../bootstrap/less/hero-unit.less";
 
 // Utility classes
 @import "../bootstrap/less/utilities.less"; // Has to be last to override when necessary
@@ -96,10 +96,13 @@
 
 // Typography
 // -------------------------
-@sansFontFamily: "Oxygen", "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-@serifFontFamily: "acta-display", "Times New Roman", Times, serif;
+// "freightsans_book", "Oxygen",
+@sansFontFamily: "Helvetica Neue", Helvetica, Arial, sans-serif;
+//"Oxygen", "Helvetica Neue", Helvetica, Arial, sans-serif;
+// "freightbig_light", "acta-display",
+@serifFontFamily: serif;
 
-@baseFontSize: 14px;
+@baseFontSize: 17px;
 @baseFontFamily: @sansFontFamily;
 @baseLineHeight: 24px;
 @altFontFamily: @serifFontFamily;
@@ -108,6 +111,18 @@
 @headingsFontWeight: normal;
 @headingsColor: @grayDarker;
 
+// Dummy firefox don't understand font variants on @font-face declarations
+@baseFontSmallCaps: "freightsans_book_sc", "freightsans_book", "Oxygen", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-@import "custom";
+@iconSpritePath:          "../bootstrap/img/glyphicons-halflings.png";
+@iconWhiteSpritePath:     "../bootstrap/img/glyphicons-halflings-white.png";
+
+
+@import "fonts";
+@import "global";
+@import "misc";
+@import "products";
+@import "cart";
+@import "account";
+@import "form-lists";
 @import "store-colors";

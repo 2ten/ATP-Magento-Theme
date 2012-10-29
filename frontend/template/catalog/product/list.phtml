@@ -1,0 +1,106 @@
+<?php
+    $_productCollection=$this->getLoadedProductCollection();
+    $_helper = $this->helper('catalog/output');
+?>
+<?php if(!$_productCollection->count()): ?>
+<p class="note-msg"><?php echo $this->__('There are no products matching the selection.') ?></p>
+<?php else: ?>
+<div class="category-products">
+    <div class="toolbar-top">
+      <?php echo $this->getToolbarHtml() ?>
+    </div>
+    <?php // List mode ?>
+    <?php if($this->getMode()!='grid'): ?>
+    <?php $_iterator = 0; ?>
+    <ol class="products-list" id="products-list">
+    <?php foreach ($_productCollection as $_product): ?>
+        <?php $_sellable = $_product->isSaleable(); ?>
+        <li class="item<?php if( ++$_iterator == sizeof($_productCollection) ): ?> last<?php endif; ?>">
+            <?php // Product Image ?>
+            <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image img-polaroid"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->keepAspectRatio(true)->resize(135, 186); ?>" width="135" height="186" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" /></a>
+            <?php // Product description ?>
+            <div class="product-shop">
+                    <?php $_productNameStripped = $this->stripTags($_product->getName(), null, true); ?>
+                    <h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $_productNameStripped; ?>"><?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?></a></h2>
+                    <!--
+                    <div class="desc std">
+                    <?php echo $_helper->productAttribute($_product, $_product->getShortDescription(), 'description') ?>
+                    </div>
+                    <?php if($_product->getRatingSummary()): ?>
+                    <?php echo $this->getReviewsSummaryHtml($_product) ?>
+                    <?php endif; ?>
+                    -->
+                    <?php if (!$_sellable): ?>
+                        <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
+                    <?php endif; ?>
+                    <?php echo $this->getPriceHtml($_product, true) ?>
+                    <div class="buttons">
+                    <?php if($_sellable): ?>
+                         <button type="buttton" title="<?php echo $this->__('Add to Cart') ?>" class="btn btn-large btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><i class="icon-plus-sign"></i> <?php echo $this->__('Add to Cart') ?></button> <span class="separator"><?php echo $this->__('or'); ?></span>
+                    <?php endif; ?>
+                    <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $_productNameStripped ?>" class="btn btn-mini link-learn"><?php echo $this->__('Learn More') ?></a>
+                    </div>
+
+                    <ul class="add-to-links">
+                        <?php if ($this->helper('wishlist')->isAllow()) : ?>
+                            <li><a title="<?php echo $this->__('Add this item to your Wishlist') ?>" href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>" class="link-wishlist"><i class="icon-heart"></i> <span><?php echo $this->__('Add to Wishlist') ?></span></a></li>
+                        <?php endif; ?>
+                        <?php if($_compareUrl=$this->getAddToCompareUrl($_product)): ?>
+                            <li><a title="<?php echo $this->__('Add this item to Compare List') ?>" href="<?php echo $_compareUrl ?>" class="link-compare"><i class="icon-bookmark"></i> <span><?php echo $this->__('Add to Compare') ?></span></a></li>
+                        <?php endif; ?>
+                    </ul>
+            </div>
+        </li>
+    <?php endforeach; ?>
+    </ol>
+    <script type="text/javascript">decorateList('products-list', 'none-recursive')</script>
+
+    <?php else: ?>
+
+    <?php // Grid Mode ?>
+
+    <?php $_collectionSize = $_productCollection->count() ?>
+    <?php $_columnCount = $this->getColumnCount(); ?>
+    <?php $i=0; foreach ($_productCollection as $_product): ?>
+      <?php $_sellabe = $_product->isSaleable(); ?>
+        <?php if ($i++%$_columnCount==0): ?>
+        <ul class="products-grid">
+        <?php endif ?>
+            <li class="item<?php if(($i-1)%$_columnCount==0): ?> first<?php elseif($i%$_columnCount==0): ?> last<?php endif; ?>">
+
+               <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image img-polaroid"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->keepAspectRatio(true)->resize(180, 249); ?>" width="180" height="249" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" /></a>
+                <?php if(!$_sellabe): ?>
+                  <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
+                <?php endif; ?>
+
+                <div class="item-bottom">
+                  <h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></a></h2>
+                  <?php echo $this->getPriceHtml($_product, true) ?>
+                  <div class="add-buttons clearfix">
+                  <?php if ($_product->isSaleable()): ?>
+                    <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="btn btn-mini btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><i class="icon-plus-sign"></i> <?php echo $this->__('Add') ?></button>
+                  <?php endif ?>
+
+                   <ul class="add-to-links">
+                     <?php if ($this->helper('wishlist')->isAllow()) : ?>
+                     <li><a title="<?php echo $this->__('Add this item to your Wishlist') ?>" href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>" class="link-wishlist"><i class="icon-heart"></i> <span><?php echo $this->__('Add to Wishlist') ?></span></a></li>
+                     <?php endif; ?>
+                     <?php if($_compareUrl=$this->getAddToCompareUrl($_product)): ?>
+                     <li><a title="<?php echo $this->__('Add this item to Compare List') ?>" href="<?php echo $_compareUrl ?>" class="link-compare"><i class="icon-bookmark"></i> <span><?php echo $this->__('Add to Compare') ?></span></a></li>
+                     <?php endif; ?>
+                   </ul>
+                   </div>
+                 </div>
+            </li>
+        <?php if ($i%$_columnCount==0 || $i==$_collectionSize): ?>
+        </ul>
+        <?php endif ?>
+        <?php endforeach ?>
+        <script type="text/javascript">decorateGeneric($$('ul.products-grid'), ['odd','even','first','last'])</script>
+    <?php endif; ?>
+
+    <div class="toolbar-bottom">
+        <?php echo $this->getToolbarHtml() ?>
+    </div>
+</div>
+<?php endif; ?>

@@ -1,0 +1,261 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.store-jewerly a, .store-jewerly  .block-layered-nav .currently .label {
+  color: #a582bb;
+}
+
+.store-jewerly a:hover {
+  color: #80559c;
+}
+.store-jewerly .btn-link {
+  color: #a582bb;
+}
+.store-jewerly .btn-link:hover {
+  color: #80559c;
+}
+.store-jewerly a.thumbnail:hover {
+  border-color: #a582bb;
+}
+.store-jewerly .nav-list > .active > a,
+.store-jewerly .nav-list > .active > a:hover {
+  background-color: #a582bb;
+}
+.store-jewerly .nav-pills > .active > a,
+.store-jewerly .nav-pills > .active > a:hover {
+  background-color: #a582bb;
+}
+.store-jewerly .navbar-atp .nav li.dropdown.open > .dropdown-toggle,
+.store-jewerly .navbar-atp .nav li.dropdown.active > .dropdown-toggle,
+.store-jewerly .navbar-atp .nav li.dropdown.open.active > .dropdown-toggle {
+  color: #a582bb;
+}
+.store-jewerly .navbar-atp .nav li.dropdown.open > .dropdown-toggle,
+.store-jewerly .navbar-atp .nav li.dropdown.active > .dropdown-toggle,
+.store-jewerly .navbar-atp .nav li.dropdown.open.active > .dropdown-toggle {
+  color: #a582bb;
+}
+.store-jewerly .nav .dropdown-toggle .caret {
+  border-top-color: #a582bb;
+  border-bottom-color: #a582bb;
+}
+.store-jewerly .nav .dropdown-toggle:hover .caret {
+  border-top-color: #80559c;
+  border-bottom-color: #80559c;
+}
+.store-jewerly .btn-primary {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #ad82bb;
+  background-image: -moz-linear-gradient(top, #a582bb, #b882bb);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#a582bb), to(#b882bb));
+  background-image: -webkit-linear-gradient(top, #a582bb, #b882bb);
+  background-image: -o-linear-gradient(top, #a582bb, #b882bb);
+  background-image: linear-gradient(to bottom, #a582bb, #b882bb);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa582bb', endColorstr='#ffb882bb', GradientType=0);
+  border-color: #b882bb #b882bb #98559c;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #b882bb;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.store-jewerly .btn-primary:hover,
+.store-jewerly .btn-primary:active,
+.store-jewerly .btn-primary.active,
+.store-jewerly .btn-primary.disabled,
+.store-jewerly .btn-primary[disabled] {
+  color: #ffffff;
+  background-color: #b882bb;
+  *background-color: #af71b2;
+}
+.store-jewerly .btn-primary:active,
+.store-jewerly .btn-primary.active {
+  background-color: #a561a9 \9;
+}
+.store-jewerly .btn-primary.dropdown-toggle {
+  background-color: #b882bb;
+}
+.store-jewerly .dropdown-menu li > a:hover,
+.store-jewerly .dropdown-menu li > a:focus,
+.store-jewerly .dropdown-submenu:hover > a {
+  background-color: #a582bb;
+  background-color: #a07bb7;
+  background-image: -moz-linear-gradient(top, #a582bb, #9971b2);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#a582bb), to(#9971b2));
+  background-image: -webkit-linear-gradient(top, #a582bb, #9971b2);
+  background-image: -o-linear-gradient(top, #a582bb, #9971b2);
+  background-image: linear-gradient(to bottom, #a582bb, #9971b2);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa582bb', endColorstr='#ff9971b2', GradientType=0);
+}
+.store-jewerly .dropdown-menu .active > a,
+.store-jewerly .dropdown-menu .active > a:hover {
+  background-color: #a582bb;
+  background-color: #a07bb7;
+  background-image: -moz-linear-gradient(top, #a582bb, #9971b2);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#a582bb), to(#9971b2));
+  background-image: -webkit-linear-gradient(top, #a582bb, #9971b2);
+  background-image: -o-linear-gradient(top, #a582bb, #9971b2);
+  background-image: linear-gradient(to bottom, #a582bb, #9971b2);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa582bb', endColorstr='#ff9971b2', GradientType=0);
+}
+.store-jewerly .logo-container strong {
+  background-position: 0 -1075px;
+}
+.store-jewerly .header-alternate .links li a:hover,
+.store-jewerly .header-alternate .links li a:active,
+.store-jewerly .header-alternate .links li a.active {
+  color: #80559c;
+}
+.store-ceramics a, .block-layered-nav .currently .label {
+  color: #ed7f60;
+}
+.store-ceramics a:hover {
+  color: #e5481b;
+}
+.store-ceramics .btn-link {
+  color: #ed7f60;
+}
+.store-ceramics .btn-link:hover {
+  color: #e5481b;
+}
+.store-ceramics a.thumbnail:hover {
+  border-color: #ed7f60;
+}
+.store-ceramics .nav-list > .active > a,
+.store-ceramics .nav-list > .active > a:hover {
+  background-color: #ed7f60;
+}
+.store-ceramics .nav-pills > .active > a,
+.store-ceramics .nav-pills > .active > a:hover {
+  background-color: #ed7f60;
+}
+.store-ceramics .navbar-atp .nav li.dropdown.open > .dropdown-toggle,
+.store-ceramics .navbar-atp .nav li.dropdown.active > .dropdown-toggle,
+.store-ceramics .navbar-atp .nav li.dropdown.open.active > .dropdown-toggle {
+  color: #ed7f60;
+}
+.store-ceramics .navbar-atp .nav li.dropdown.open > .dropdown-toggle,
+.store-ceramics .navbar-atp .nav li.dropdown.active > .dropdown-toggle,
+.store-ceramics .navbar-atp .nav li.dropdown.open.active > .dropdown-toggle {
+  color: #ed7f60;
+}
+.store-ceramics .nav .dropdown-toggle .caret {
+  border-top-color: #ed7f60;
+  border-bottom-color: #ed7f60;
+}
+.store-ceramics .nav .dropdown-toggle:hover .caret {
+  border-top-color: #e5481b;
+  border-bottom-color: #e5481b;
+}
+.store-ceramics .btn-primary {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #ed9260;
+  background-image: -moz-linear-gradient(top, #ed7f60, #edae60);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ed7f60), to(#edae60));
+  background-image: -webkit-linear-gradient(top, #ed7f60, #edae60);
+  background-image: -o-linear-gradient(top, #ed7f60, #edae60);
+  background-image: linear-gradient(to bottom, #ed7f60, #edae60);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffed7f60', endColorstr='#ffedae60', GradientType=0);
+  border-color: #edae60 #edae60 #e58b1b;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #edae60;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.store-ceramics .btn-primary:hover,
+.store-ceramics .btn-primary:active,
+.store-ceramics .btn-primary.active,
+.store-ceramics .btn-primary.disabled,
+.store-ceramics .btn-primary[disabled] {
+  color: #ffffff;
+  background-color: #edae60;
+  *background-color: #eaa249;
+}
+.store-ceramics .btn-primary:active,
+.store-ceramics .btn-primary.active {
+  background-color: #e89732 \9;
+}
+.store-ceramics .btn-primary.dropdown-toggle {
+  background-color: #edae60;
+}
+.store-ceramics .dropdown-menu li > a:hover,
+.store-ceramics .dropdown-menu li > a:focus,
+.store-ceramics .dropdown-submenu:hover > a {
+  background-color: #ed7f60;
+  background-color: #ec7857;
+  background-image: -moz-linear-gradient(top, #ed7f60, #ea6d49);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ed7f60), to(#ea6d49));
+  background-image: -webkit-linear-gradient(top, #ed7f60, #ea6d49);
+  background-image: -o-linear-gradient(top, #ed7f60, #ea6d49);
+  background-image: linear-gradient(to bottom, #ed7f60, #ea6d49);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffed7f60', endColorstr='#ffea6d49', GradientType=0);
+}
+.store-ceramics .dropdown-menu .active > a,
+.store-ceramics .dropdown-menu .active > a:hover {
+  background-color: #ed7f60;
+  background-color: #ec7857;
+  background-image: -moz-linear-gradient(top, #ed7f60, #ea6d49);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ed7f60), to(#ea6d49));
+  background-image: -webkit-linear-gradient(top, #ed7f60, #ea6d49);
+  background-image: -o-linear-gradient(top, #ed7f60, #ea6d49);
+  background-image: linear-gradient(to bottom, #ed7f60, #ea6d49);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffed7f60', endColorstr='#ffea6d49', GradientType=0);
+}
+.store-ceramics .header-alternate .links li a:hover,
+.store-ceramics .header-alternate .links li a:active,
+.store-ceramics .header-alternate .links li a.active {
+  color: #e5481b;
+}
+.store-ceramics .logo-container strong {
+  background-position: 0 -765px;
+}
+
+.store-jewerly .span4 {
+	border-color:#e2c9f1;
+}
+
+.store-ceramics .span4 {
+	border-color:#facec1;
+}
+
+.store-jewerly .morelink, .store-jewerly  #page-footer .block-subscribe .actions .btn  {
+	background-color:#a584bd;
+}
+.store-ceramics .morelink,  .store-ceramics  #page-footer .block-subscribe .actions .btn {
+	background-color:#ed7f60;
+}
+
+#page-footer .span2 a, #page-footer ul.footer-links a { color:#555}

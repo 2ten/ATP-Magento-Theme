@@ -1,0 +1,72 @@
+// Core variables and mixins
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+
+// Grays
+// -------------------------
+@gray: #555;
+@grayDarker: #222;
+
+// Accent colors
+// ----------------------------
+@violetish: #a582bb;
+@fucsy: #cb1c79;
+@terra: #ed7f60;
+
+// Stores
+@defaultStoreLinkColor: @violetish;
+@defaultStoreLinkColorHover: darken(@defaultStoreLinkColor, 15%);
+
+@defaultCeramicsStoreLinkColor: @terra;
+@defaultCeramicsStoreLinkColorHover: darken(@terra, 15%);
+
+
+// Buttons
+// -------------------------
+@defaultStoreBtnPrimaryBackground: @defaultStoreLinkColor;
+@defaultStoreBtnPrimaryBackgroundHighlight: spin(@defaultStoreBtnPrimaryBackground, 20%);
+
+@defaultCeramicsStoreBtnPrimaryBackground: @defaultCeramicsStoreLinkColor;
+@defaultCeramicsStoreBtnPrimaryBackgroundHighlight: spin(@defaultCeramicsStoreBtnPrimaryBackground, 20%);
+
+@defaultStoreDropdownLinkBackgroundActive: @defaultStoreLinkColor;
+@defaultCeramicsStoreDropdownLinkBackgroundActive: @defaultCeramicsStoreLinkColor;
+
+@defaultStoreDropdownLinkBackgroundHover: @defaultStoreDropdownLinkBackgroundActive;
+@defaultCeramicsStoreDropdownLinkBackgroundHover: @defaultCeramicsStoreDropdownLinkBackgroundActive;
+
+
+// Scaffolding
+// -------------------------
+@textColor: @gray;
+
+// Links
+// -------------------------
+//@linkColor: @violetish;
+//@linkColorHover: darken(@linkColor, 15%);
+
+// Typography
+// -------------------------
+// "freightsans_book", "Oxygen",
+@sansFontFamily: "Helvetica Neue", Helvetica, Arial, sans-serif;
+//"Oxygen", "Helvetica Neue", Helvetica, Arial, sans-serif;
+// "freightbig_light", "acta-display",
+@serifFontFamily: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+@baseFontSize: 17px;
+@baseFontFamily: @sansFontFamily;
+@baseLineHeight: 24px;
+@altFontFamily: @serifFontFamily;
+
+@headingsFontFamily: @serifFontFamily;
+@headingsFontWeight: normal;
+@headingsColor: @grayDarker;
+
+// Dummy firefox don't understand font variants on @font-face declarations
+@baseFontSmallCaps: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@iconSpritePath:          "../bootstrap/img/glyphicons-halflings.png";
+@iconWhiteSpritePath:     "../bootstrap/img/glyphicons-halflings-white.png";
+
+
+@fontAwesomePath: "../fonts";

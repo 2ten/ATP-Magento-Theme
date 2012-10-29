@@ -60,3 +60,7 @@ var atp = atp || { 'options': {}, 'behaviors': {} };
   };
 
 }) (jQuery, atp, window.theme_settings || {});
+
+jQuery(document).ready(function(){
+  jQuery('.block-layered-nav .currently ol li:last').addClass('last')
+})
