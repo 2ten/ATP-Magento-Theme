@@ -62,6 +62,18 @@
       <action method="addCss"><stylesheet>css/store-colors.css</stylesheet></action>
     </reference>
 
+    <reference name="after_body_start">
+      <block type="core/text" name="maintainance-notice">
+        <action method="setText">
+          <text><![CDATA[
+          <div id="maintainance-notice" class="alert alert-error">
+            Our store is currently under maintainance. No orders will be fulfilled at this time, please excuse us.
+          </div>
+          ]]></text>
+        </action>
+      </block>
+    </reference>
+
   </default>
 
 
