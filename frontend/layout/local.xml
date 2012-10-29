@@ -35,9 +35,8 @@
                 rel='stylesheet' type='text/css'>
           ]]></text>
         </action>
--->
       </block>
-
+-->
       <action method="addItem"><type>skin_js</type><name>bootstrap/js/bootstrap-dropdown.js</name></action>
       <action method="addItem"><type>skin_js</type><name>js/theme.js</name></action>
 
