@@ -67,8 +67,8 @@
       <block type="core/text" name="maintainance-notice">
         <action method="setText">
           <text><![CDATA[
-          <div id="maintainance-notice" class="alert alert-error">
-            Our store is currently under maintainance. Orders won't be fulfilled at this time, please excuse us.
+          <div id="maintenance-notice" class="alert alert-error">
+            Our store is currently under maintenance. Orders won't be fulfilled at this time, please excuse us.
           </div>
           ]]></text>
         </action>
