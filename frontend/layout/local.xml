@@ -14,12 +14,13 @@
     <remove name="left.reports.product.viewed" />
     <remove name="right.reports.product.viewed" />
     <remove name="right.reports.product.compared" />
-    <remove name="footer_links" />
+    <!-- <remove name="footer_links" /> -->
 
     <reference name="footer">
       <block type="core/template" name="footer_side" template="page/html/footer-side.phtml">
-        <block type="newsletter/subscribe" name="bottom.newsletter"
-      template="newsletter/subscribe.phtml" />
+        <block type="monkey/signup" name="left.monkeysignup" template="magemonkey/lists.phtml"/>
+        <!--<block type="newsletter/subscribe" name="bottom.newsletter"
+      template="newsletter/subscribe.phtml" />-->
         <block type="cms/block" name="connect_links">
           <action method="setBlockId"><block_id>follow-us-footer</block_id></action>
         </block>
