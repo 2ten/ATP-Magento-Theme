@@ -2,7 +2,6 @@
 
 <layout version="0.1.0">
 
-
   <default>
     <remove name="left.permanent.callout" />
     <remove name="right.permanent.callout" />
@@ -14,13 +13,13 @@
     <remove name="left.reports.product.viewed" />
     <remove name="right.reports.product.viewed" />
     <remove name="right.reports.product.compared" />
-    <!-- <remove name="footer_links" /> -->
+    <remove name="footer_links" />
 
     <reference name="footer">
       <block type="core/template" name="footer_side" template="page/html/footer-side.phtml">
-        <block type="monkey/signup" name="left.monkeysignup" template="magemonkey/lists.phtml"/>
-        <!--<block type="newsletter/subscribe" name="bottom.newsletter"
-      template="newsletter/subscribe.phtml" />-->
+        <!--<block type="monkey/signup" name="left.monkeysignup" template="magemonkey/lists.phtml"/>-->
+        <block type="newsletter/subscribe" name="bottom.newsletter"
+      template="newsletter/subscribe.phtml" />
         <block type="cms/block" name="connect_links">
           <action method="setBlockId"><block_id>follow-us-footer</block_id></action>
         </block>
@@ -63,7 +62,7 @@
       <action method="addCss"><stylesheet>css/form-lists.css</stylesheet></action>
       <action method="addCss"><stylesheet>css/store-colors.css</stylesheet></action>
     </reference>
-
+<!--
     <reference name="after_body_start">
       <block type="core/text" name="maintainance-notice">
         <action method="setText">
@@ -75,7 +74,7 @@
         </action>
       </block>
     </reference>
-
+-->
   </default>
 
 
