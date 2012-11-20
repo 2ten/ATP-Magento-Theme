@@ -25,49 +25,49 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.store-jewerly a, .store-jewerly  .block-layered-nav .currently .label {
+.store-jewelry a, .store-jewelry  .block-layered-nav .currently .label {
   color: #a582bb;
 }
 
-.store-jewerly a:hover {
+.store-jewelry a:hover {
   color: #80559c;
 }
-.store-jewerly .btn-link {
+.store-jewelry .btn-link {
   color: #a582bb;
 }
-.store-jewerly .btn-link:hover {
+.store-jewelry .btn-link:hover {
   color: #80559c;
 }
-.store-jewerly a.thumbnail:hover {
+.store-jewelry a.thumbnail:hover {
   border-color: #a582bb;
 }
-.store-jewerly .nav-list > .active > a,
-.store-jewerly .nav-list > .active > a:hover {
+.store-jewelry .nav-list > .active > a,
+.store-jewelry .nav-list > .active > a:hover {
   background-color: #a582bb;
 }
-.store-jewerly .nav-pills > .active > a,
-.store-jewerly .nav-pills > .active > a:hover {
+.store-jewelry .nav-pills > .active > a,
+.store-jewelry .nav-pills > .active > a:hover {
   background-color: #a582bb;
 }
-.store-jewerly .navbar-atp .nav li.dropdown.open > .dropdown-toggle,
-.store-jewerly .navbar-atp .nav li.dropdown.active > .dropdown-toggle,
-.store-jewerly .navbar-atp .nav li.dropdown.open.active > .dropdown-toggle {
+.store-jewelry .navbar-atp .nav li.dropdown.open > .dropdown-toggle,
+.store-jewelry .navbar-atp .nav li.dropdown.active > .dropdown-toggle,
+.store-jewelry .navbar-atp .nav li.dropdown.open.active > .dropdown-toggle {
   color: #a582bb;
 }
-.store-jewerly .navbar-atp .nav li.dropdown.open > .dropdown-toggle,
-.store-jewerly .navbar-atp .nav li.dropdown.active > .dropdown-toggle,
-.store-jewerly .navbar-atp .nav li.dropdown.open.active > .dropdown-toggle {
+.store-jewelry .navbar-atp .nav li.dropdown.open > .dropdown-toggle,
+.store-jewelry .navbar-atp .nav li.dropdown.active > .dropdown-toggle,
+.store-jewelry .navbar-atp .nav li.dropdown.open.active > .dropdown-toggle {
   color: #a582bb;
 }
-.store-jewerly .nav .dropdown-toggle .caret {
+.store-jewelry .nav .dropdown-toggle .caret {
   border-top-color: #a582bb;
   border-bottom-color: #a582bb;
 }
-.store-jewerly .nav .dropdown-toggle:hover .caret {
+.store-jewelry .nav .dropdown-toggle:hover .caret {
   border-top-color: #80559c;
   border-bottom-color: #80559c;
 }
-.store-jewerly .btn-primary {
+.store-jewelry .btn-primary {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #ad82bb;
@@ -85,25 +85,25 @@
 
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
-.store-jewerly .btn-primary:hover,
-.store-jewerly .btn-primary:active,
-.store-jewerly .btn-primary.active,
-.store-jewerly .btn-primary.disabled,
-.store-jewerly .btn-primary[disabled] {
+.store-jewelry .btn-primary:hover,
+.store-jewelry .btn-primary:active,
+.store-jewelry .btn-primary.active,
+.store-jewelry .btn-primary.disabled,
+.store-jewelry .btn-primary[disabled] {
   color: #ffffff;
   background-color: #b882bb;
   *background-color: #af71b2;
 }
-.store-jewerly .btn-primary:active,
-.store-jewerly .btn-primary.active {
+.store-jewelry .btn-primary:active,
+.store-jewelry .btn-primary.active {
   background-color: #a561a9 \9;
 }
-.store-jewerly .btn-primary.dropdown-toggle {
+.store-jewelry .btn-primary.dropdown-toggle {
   background-color: #b882bb;
 }
-.store-jewerly .dropdown-menu li > a:hover,
-.store-jewerly .dropdown-menu li > a:focus,
-.store-jewerly .dropdown-submenu:hover > a {
+.store-jewelry .dropdown-menu li > a:hover,
+.store-jewelry .dropdown-menu li > a:focus,
+.store-jewelry .dropdown-submenu:hover > a {
   background-color: #a582bb;
   background-color: #a07bb7;
   background-image: -moz-linear-gradient(top, #a582bb, #9971b2);
@@ -114,8 +114,8 @@
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa582bb', endColorstr='#ff9971b2', GradientType=0);
 }
-.store-jewerly .dropdown-menu .active > a,
-.store-jewerly .dropdown-menu .active > a:hover {
+.store-jewelry .dropdown-menu .active > a,
+.store-jewelry .dropdown-menu .active > a:hover {
   background-color: #a582bb;
   background-color: #a07bb7;
   background-image: -moz-linear-gradient(top, #a582bb, #9971b2);
@@ -126,12 +126,12 @@
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa582bb', endColorstr='#ff9971b2', GradientType=0);
 }
-.store-jewerly .logo-container strong {
+.store-jewelry .logo-container strong {
   background-position: 0 -1075px;
 }
-.store-jewerly .header-alternate .links li a:hover,
-.store-jewerly .header-alternate .links li a:active,
-.store-jewerly .header-alternate .links li a.active {
+.store-jewelry .header-alternate .links li a:hover,
+.store-jewelry .header-alternate .links li a:active,
+.store-jewelry .header-alternate .links li a.active {
   color: #80559c;
 }
 .store-ceramics a, .block-layered-nav .currently .label {
@@ -243,7 +243,7 @@
   background-position: 0 -765px;
 }
 
-.store-jewerly .span4 {
+.store-jewelry .span4 {
 	border-color:#e2c9f1;
 }
 
@@ -251,7 +251,7 @@
 	border-color:#facec1;
 }
 
-.store-jewerly .morelink, .store-jewerly  #page-footer .block-subscribe .actions .btn  {
+.store-jewelry .morelink, .store-jewelry  #page-footer .block-subscribe .actions .btn  {
 	background-color:#a584bd;
 }
 .store-ceramics .morelink,  .store-ceramics  #page-footer .block-subscribe .actions .btn {

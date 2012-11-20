@@ -265,9 +265,15 @@
 }
 /* Gift Messages */
 .gift-messages-form {
-  border: 1px solid #ddd;
-  background-color: #f5f5f5;
+  border: 0px solid #ddd;
+  background-color: #fff;
+  padding:10px 20px
 }
+
+.gift-messages h3 {
+  font-size:20px
+}
+
 .gift-messages-form {
   position: relative;
 }
@@ -343,13 +349,21 @@
 .block-progress dt.complete,
 .block-progress dd.complete {
   background-color: #f6f6f6;
+  padding:8px 5px
 }
 .opc {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 0px solid #ddd;
   position: relative;
+  list-style:none;
+  margin:0
 }
+.opc ul, .opc ol {
+  list-style:none;
+  margin:0
+}
+
 .opc li.section {
-  border: 1px solid #ddd;
+  border: 0px solid #ddd;
   border-bottom: 0;
 }
 .opc .buttons-set.disabled button.button {
@@ -360,17 +374,18 @@
   line-height: 21px;
 }
 .opc .step-title {
-  background-color: #f6f6f6;
-  padding: 0 5px;
-  text-align: right;
+  padding:0;
+  text-align: left;
 }
 .opc .step-title .number {
   float: left;
-  line-height: 22px;
-  margin-right: 5px;
+  line-height: 38px;
+  margin-right: 15px;
+  font-size:30px;
+  font-style:italic
 }
 .opc .step-title h2 {
-  float: left;
+  float: none;
 }
 .opc .step-title a {
   display: none;
@@ -381,15 +396,28 @@
 }
 /*.opc .allow .step-title a { display:block; }*/
 .opc .active .step-title {
-  background-color: #ccc;
+
   cursor: default;
 }
 /*.opc .active .step-title a { display:none; }*/
 .opc .step {
-  border-top: 1px solid #ddd;
-  padding: 10px;
+  border-bottom: 0px solid #ddd;
+  padding: 10px 20px;
   position: relative;
+  background-color:#EFEFEF
 }
+.opc .step-title,
+.opc .step-title h2 {
+  color:#999
+}
+
+
+.opc .active .step-title,
+.opc .active .step-title h2 {
+  border-top: 0px solid #ddd;
+  color:#333
+}
+
 .opc .step .tool-tip {
   right: 10px;
 }
@@ -421,4 +449,30 @@
   font-size: 1.5em;
   text-align: right;
 }
+
+
+#opc-shipping_method dl.sp-methods dl {
+	margin:0}
+#opc-shipping_method dl.sp-methods dd {
+	margin:0}
+	
+#opc-shipping_method dl.sp-methods dd ul {
+	overflow:hidden
+}
+
+#opc-shipping_method dl.sp-methods dd ul li {
+	float:left;
+	margin:0 20px 0 0
+}		
+		
+#checkoutSteps .radio,
+#checkoutSteps .checkbox,
+#checkoutSteps label {
+	display:inline-block;
+	margin-right:5px;
+	line-height:20px
+}	
+
+	
+
 /* ======================================================================================= */

@@ -17,6 +17,23 @@
 	width:15px
 }
 
+.form-list li ul {
+	overflow:hidden
+}
+
+.form-list li ul li {
+	float:left;
+	width:100%;
+	min-height:50px
+}
+.form-list li ul li .field {
+	float:left;
+	width:50%;
+	min-height:50px
+}
+
+
+
 
 
 /* Form Validation */

@@ -5,7 +5,7 @@
 </script>
 <div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
 <div class="product-view">
-    <div class="product-essential">
+    <div class="product-essential clearfix">
     <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
         <div class="no-display">
             <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
@@ -44,9 +44,9 @@
               <?php echo $this->getChildHtml('extrahint') ?>
             </div>
 
-            <div class="product-img-box">
+
               	<?php echo $this->getChildHtml('media') ?>
-            </div>
+
 
             <div class="clearer"></div>
 

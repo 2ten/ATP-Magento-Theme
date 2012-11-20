@@ -40,29 +40,32 @@
     <reference name="content">
       <block type="core/template" name="home_callouts" template="callouts/home.phtml"/>
     </reference>
-  </cms_index_index>
+  </cms_index_index>A
 
-  <STORE_jewerly>
+  <STORE_jewelry>
     <reference name="root">
-      <action method="addBodyClass"><classname>store-jewerly</classname></action>
+      <action method="addBodyClass"><classname>store-jewelry</classname></action>
     </reference>
     <reference name="header">
       <block type="core/text" name="storeTagline">
         <action method="setText">
           <text><![CDATA[
-          <h4>Jewerly & Accesories</h4>
+          <h4>Jewelry & Accessories</h4>
           ]]></text>
         </action>
       </block>
     </reference>
     <reference name="footer">
       <block type="cms/block" name="closure_links" before="-">
-        <action method="setBlockId"><block_id>jewerly_closure_links</block_id></action>
+        <action method="setBlockId"><block_id>jewelry_closure_links</block_id></action>
+      </block>
+      <block type="cms/block" name="cms_footer_links">
+        <action method="setBlockId"><block_id>jewerly_footer_links</block_id></action>
       </block>
     </reference>
-  </STORE_jewerly>
+  </STORE_jewelry>
 
-  <STORE_jewerly_cms_index_index>
+  <STORE_jewelry_cms_index_index>
     <reference name="home_callouts">
       <block type="cms/block" name="home-callout-1">
         <action method="setBlockId"><block_id>home-callout-1</block_id></action>
@@ -74,7 +77,7 @@
         <action method="setBlockId"><block_id>home-callout-3</block_id></action>
       </block>
     </reference>
-  </STORE_jewerly_cms_index_index>
+  </STORE_jewelry_cms_index_index>
 
   <STORE_ceramics>
     <reference name="root">
@@ -87,6 +90,14 @@
           <h4>Pre-Columbian Ceramic Reproductions</h4>
           ]]></text>
         </action>
+      </block>
+    </reference>
+    <reference name="footer">
+      <block type="cms/block" name="closure_links" before="-">
+        <action method="setBlockId"><block_id>ceramics_closure_links</block_id></action>
+      </block>
+      <block type="cms/block" name="cms_footer_links">
+        <action method="setBlockId"><block_id>ceramics_footer_links</block_id></action>
       </block>
     </reference>
   </STORE_ceramics>

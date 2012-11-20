@@ -43,10 +43,10 @@
 
                     <ul class="add-to-links">
                         <?php if ($this->helper('wishlist')->isAllow()) : ?>
-                            <li><a title="<?php echo $this->__('Add this item to your Wishlist') ?>" href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>" class="link-wishlist"><i class="icon-heart"></i> <span><?php echo $this->__('Add to Wishlist') ?></span></a></li>
+                            <li><a title="<?php echo $this->__('Add this item to your Wishlist') ?>" href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>" class="link-wishlist btn btn-mini"><i class="icon-heart"></i> <span><?php echo $this->__('Add to Wishlist') ?></span></a></li>
                         <?php endif; ?>
                         <?php if($_compareUrl=$this->getAddToCompareUrl($_product)): ?>
-                            <li><a title="<?php echo $this->__('Add this item to Compare List') ?>" href="<?php echo $_compareUrl ?>" class="link-compare"><i class="icon-bookmark"></i> <span><?php echo $this->__('Add to Compare') ?></span></a></li>
+                            <li><a title="<?php echo $this->__('Add this item to Compare List') ?>" href="<?php echo $_compareUrl ?>" class="link-compare  btn btn-mini"><i class="icon-bookmark"></i> <span><?php echo $this->__('Add to Compare') ?></span></a></li>
                         <?php endif; ?>
                     </ul>
             </div>
@@ -78,15 +78,15 @@
                   <?php echo $this->getPriceHtml($_product, true) ?>
                   <div class="add-buttons clearfix">
                   <?php if ($_product->isSaleable()): ?>
-                    <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="btn btn-mini btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><i class="icon-plus-sign"></i> <?php echo $this->__('Add') ?></button>
+                    <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="btn btn-mini btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><i class="icon-plus-sign"></i> <?php echo $this->__('Add to Cart') ?></button>
                   <?php endif ?>
 
                    <ul class="add-to-links">
                      <?php if ($this->helper('wishlist')->isAllow()) : ?>
-                     <li><a title="<?php echo $this->__('Add this item to your Wishlist') ?>" href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>" class="link-wishlist"><i class="icon-heart"></i> <span><?php echo $this->__('Add to Wishlist') ?></span></a></li>
+                     <li><a title="<?php echo $this->__('Add this item to your Wishlist') ?>" href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>" class="link-wishlist  btn btn-mini"><i class="icon-heart"></i> <span><?php echo $this->__('Add to Wishlist') ?></span></a></li>
                      <?php endif; ?>
                      <?php if($_compareUrl=$this->getAddToCompareUrl($_product)): ?>
-                     <li><a title="<?php echo $this->__('Add this item to Compare List') ?>" href="<?php echo $_compareUrl ?>" class="link-compare"><i class="icon-bookmark"></i> <span><?php echo $this->__('Add to Compare') ?></span></a></li>
+                     <li><a title="<?php echo $this->__('Add this item to Compare List') ?>" href="<?php echo $_compareUrl ?>" class="link-compare  btn btn-mini"><i class="icon-bookmark"></i> <span><?php echo $this->__('Add to Compare') ?></span></a></li>
                      <?php endif; ?>
                    </ul>
                    </div>

@@ -23,6 +23,21 @@
         <block type="cms/block" name="connect_links">
           <action method="setBlockId"><block_id>follow-us-footer</block_id></action>
         </block>
+        <block type="core/text" name="thefind-embed">
+          <action method="setText">
+            <text><![CDATA[
+<a class="tf_upfront_badge" href="http://www.thefind.com/store/about-acrossthepuddle" title="TheFind Upfront"><img  border="0" src="//upfront.thefind.com/images/badges/r/25/8d/258db0e735372740adc73d3f409964a6.png" alt="Across The Puddle is an Upfront Merchant on TheFind. Click for info."/></a>
+<script type="text/javascript">
+  (function() {
+    var upfront = document.createElement('SCRIPT'); upfront.type = "text/javascript"; upfront.async = true;
+    upfront.src = document.location.protocol + "//upfront.thefind.com/scripts/main/utils-init-ajaxlib/upfront-badgeinit.js";
+    upfront.text = "thefind.upfront.init('tf_upfront_badge', '258db0e735372740adc73d3f409964a6')";
+    document.getElementsByTagName('HEAD')[0].appendChild(upfront);
+  })();
+</script>
+            ]]></text>
+          </action>
+        </block>
       </block>
     </reference>
 
