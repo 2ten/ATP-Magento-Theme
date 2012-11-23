@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Atp_UspsCustoms>
+      <active>true</active>
+      <codePool>local</codePool>
+      <depends>
+        <Mage_Shipping />
+        <Mage_Usa />
+      </depends>
+    </Atp_UspsCustoms>
+  </modules>
+</config>
