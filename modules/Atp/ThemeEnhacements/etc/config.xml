@@ -73,12 +73,21 @@
 
       <controller_action_layout_load_before>
 	<observers>
-	  <atp_themeenhacements>'
+	  <atp_themeenhacements>
 	    <class>atp_themeenhacements/observer</class>
 	    <method>appendStoreUpdate</method>
 	  </atp_themeenhacements>
 	</observers>
       </controller_action_layout_load_before>
+
+      <controller_action_layout_generate_blocks_after>
+	<observers>
+	  <atp_themeenhacements>
+	    <class>atp_themeenhacements/observer</class>
+	    <method>appendStoreClass</method>
+	  </atp_themeenhacements>
+	</observers>
+      </controller_action_layout_generate_blocks_after>
 
       <!--
 	 <page_block_html_topmenu_gethtml_after>

@@ -43,9 +43,6 @@
   </cms_index_index>A
 
   <STORE_jewelry>
-    <reference name="root">
-      <action method="addBodyClass"><classname>store-jewelry</classname></action>
-    </reference>
     <reference name="header">
       <block type="core/text" name="storeTagline">
         <action method="setText">
@@ -80,9 +77,6 @@
   </STORE_jewelry_cms_index_index>
 
   <STORE_ceramics>
-    <reference name="root">
-      <action method="addBodyClass"><classname>store-ceramics</classname></action>
-    </reference>
     <reference name="header">
       <block type="core/text" name="storeTagline">
         <action method="setText">
