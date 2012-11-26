@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Atp_Dataflow>
+      <version>0.1.0</version>
+    </Atp_Dataflow>
+  </modules>
+  <global>
+    <models>
+      <atp_dataflow>
+        <class>Atp_Dataflow_Model</class>
+      </atp_dataflow>
+    </models>
+  </global>
+</config>

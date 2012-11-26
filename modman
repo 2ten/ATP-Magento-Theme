@@ -8,3 +8,4 @@ modules/layout/atp_storeselector.xml app/design/frontend/base/default/layout/atp
 modules/template/atp_storeselector app/design/frontend/base/default/template/atp_storeselector
 modules/skin/atp_storeselector skin/frontend/base/default/atp_storeselector
 modules/Atp_UspsCustoms.xml app/etc/modules/Atp_UspsCustoms.xml
+modules/Atp_Dataflow.xml app/etc/modules/Atp_Dataflow.xml
