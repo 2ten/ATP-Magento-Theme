@@ -1,5 +1,56 @@
 <?php
 
+/**
+
+Intended to work with an advanced Dataflow profile with following action XML:
+
+<action type="catalog/convert_adapter_product" method="load">
+    <var name="store"><![CDATA[0]]></var>
+    <!-- <var name="filter/attribute_set"><![CDATA[77]]></var> -->
+    <var name="filter/visibility"><![CDATA[4]]></var>
+    <var name="filter/status"><![CDATA[1]]></var>
+</action>
+
+<action type="catalog/convert_parser_product" method="unparse">
+    <var name="store"><![CDATA[0]]></var>
+    <var name="url_field"><![CDATA[0]]></var>
+</action>
+
+<action type="dataflow/convert_mapper_column" method="map">
+    <var name="map">
+        <map name="sku"><![CDATA[SKU]]></map>
+        <map name="title_thefind"><![CDATA[Title]]></map>
+        <map name="description"><![CDATA[Description]]></map>
+        <map name="price"><![CDATA[Price]]></map>
+        <map name="qty"><![CDATA[Stock_Quantity]]></map>
+        <map name="brand"><![CDATA[Brand]]></map>
+        <map name="country_of_manufacture"><![CDATA[Made_In]]></map>
+        <map name="meta_keyword"><![CDATA[Tags_Keywords]]></map>
+        <map name="weight"><![CDATA[Weight]]></map>
+        <map name="measure_length"><![CDATA[Length]]></map>
+        <map name="material"><![CDATA[Material]]></map>
+        <map name="measure_width"><![CDATA[Width]]></map>
+        <map name="name"><![CDATA[_Support_Name]]></map>
+        <map name="charm"><![CDATA[_Support_Charm]]></map>
+        <map name="attribute_set"><![CDATA[_Support_Attr_Set]]></map>
+    </var>
+    <var name="_only_specified">true</var>
+</action>
+
+<action type="Atp_Dataflow_Model_Convert_Parser_TheFind" method="unparse">
+    <var name="store"><![CDATA[0]]></var>
+    <var name="delimiter"><![CDATA[,]]></var>
+    <var name="enclose"><![CDATA["]]></var>
+    <var name="fieldnames">true</var>
+</action>
+
+<action type="dataflow/convert_adapter_io" method="save">
+    <var name="type">file</var>
+    <var name="path">var/export</var>
+    <var name="filename"><![CDATA[the_find_base.csv]]></var>
+</action>
+*/
+
 class Atp_Dataflow_Model_Convert_Parser_TheFind extends Mage_Dataflow_Model_Convert_Parser_Csv
 {
 
