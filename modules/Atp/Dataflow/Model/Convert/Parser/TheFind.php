@@ -52,7 +52,7 @@ class Atp_Dataflow_Model_Convert_Parser_TheFind extends Mage_Dataflow_Model_Conv
             $row = $batchExport->getBatchData();
 
             if (isset($row['SKU']) && $row['SKU']) {
-              xdebug_break();
+              //xdebug_break();
 
               $product = $this->getProduct($row['SKU'], strtolower(substr($row['SKU'], 0, 2)) == 'cer' ? self::STORE_CERAMICS : self::STORE_JEWELRY, 'sku');
 
