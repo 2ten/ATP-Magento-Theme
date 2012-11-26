@@ -2,7 +2,7 @@
 
 /**
 
-Intended to work with an advanced Dataflow profile with following action XML:
+Intended to work with an advanced Dataflow profile with the following action XML:
 
 <action type="catalog/convert_adapter_product" method="load">
     <var name="store"><![CDATA[0]]></var>
@@ -105,7 +105,7 @@ class Atp_Dataflow_Model_Convert_Parser_TheFind extends Mage_Dataflow_Model_Conv
             if (isset($row['SKU']) && $row['SKU']) {
               //xdebug_break();
 
-              $product = $this->getProduct($row['SKU'], strtolower(substr($row['SKU'], 0, 2)) == 'cer' ? self::STORE_CERAMICS : self::STORE_JEWELRY, 'sku');
+              $product = $this->getProduct($row['SKU'], strtolower(substr($row['SKU'], 0, 3)) == 'cer' ? self::STORE_CERAMICS : self::STORE_JEWELRY, 'sku');
 
               $row['Title'] = trim($row['Title']);
               $row['Unique_ID'] = $product->getId();
