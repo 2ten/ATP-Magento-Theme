@@ -775,6 +775,15 @@ body.customer-account-create #form-validate .fieldset.first {
 	padding:0 15px;
 	color:#222
 }
+
+.home-callouts .home-callout-1 .pic {
+  float: left;
+}
+.home-callouts .span4.home-callout-1 h3 {
+  line-height: 28px;
+  margin-bottom: 18px;
+}
+
 .morelink {
 	background-color:#cfcfcf;
 	display:inline-block;
@@ -806,7 +815,7 @@ body.customer-account-create #form-validate .fieldset.first {
 	margin:0 0 0 0
 }
 .home-callouts .span4.home-callout-3 div {
-	width:130px;
+	width:95px;
 	float:right;
 	margin-right:0
 }
@@ -826,3 +835,19 @@ ul.messages {margin:0 0 20px 0}
   margin-bottom: 0;
   border-radius: 0;
 }
+
+
+/* Share This */
+.product-view .addthis_atp_style {
+ padding: 8px 0;
+ width: 250px;
+}
+.product-view .product-extra-links .addthis_atp_style a {
+  border-right: 0;
+  padding-right: 0px;
+  height: 24px;
+  line-height: 24px;
+  display: block;
+  float: left;
+}
+

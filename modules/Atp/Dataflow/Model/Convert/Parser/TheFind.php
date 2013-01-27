@@ -76,6 +76,8 @@ class Atp_Dataflow_Model_Convert_Parser_TheFind extends Mage_Dataflow_Model_Conv
         $fieldList['Categories'] = 'Categories';
         $fieldList['Online_Only'] = 'Online_Only'; // Always true
         $fieldList['Department'] = 'Department'; // Women
+        $fieldList['Free Shipping'] = 'Free Shipping';
+        $fieldList['Material'] = 'Material';
         $fieldList['Alt_Image_1'] = 'Alt_Image_1'; // Extra images
         $fieldList['Alt_Image_2'] = 'Alt_Image_2'; // Extra images
         $fieldList['Alt_Image_3'] = 'Alt_Image_3'; // Extra images
@@ -105,7 +107,8 @@ class Atp_Dataflow_Model_Convert_Parser_TheFind extends Mage_Dataflow_Model_Conv
             if (isset($row['SKU']) && $row['SKU']) {
               //xdebug_break();
 
-              $product = $this->getProduct($row['SKU'], strtolower(substr($row['SKU'], 0, 3)) == 'cer' ? self::STORE_CERAMICS : self::STORE_JEWELRY, 'sku');
+              $store = strtolower(substr($row['SKU'], 0, 3)) == 'cer' ? self::STORE_CERAMICS : self::STORE_JEWELRY;
+              $product = $this->getProduct($row['SKU'], $store, 'sku');
 
               $row['Title'] = trim($row['Title']);
               $row['Unique_ID'] = $product->getId();
@@ -119,7 +122,9 @@ class Atp_Dataflow_Model_Convert_Parser_TheFind extends Mage_Dataflow_Model_Conv
               $row['Page_URL'] = $product->getProductUrl();
               $row['Tags_Keywords'] = $this->flattenKeywords($row['Tags_Keywords'], 10);
               $row['Categories'] = $this->trailCategories($product, ' > ');
-
+              $row['Free Shipping'] = $store == self::STORE_JEWELRY ? 'Free Shipping' : '';
+              $row['Material'] = $product->getResource()->getAttribute( $store == self::STORE_JEWELRY ? 'material' : 'pc_ceramic_material' )->setStoreId($store)->getFrontend()->getValue($product);
+                //$product->getAttributeText( $store == self::STORE_JEWELRY ? 'material' : 'pc_ceramic_material' );
               // TODO: Use iterator syntax next time
               $mediaGallery = $product->getMediaGalleryImages()->toArray();
               if ($mediaGallery) {

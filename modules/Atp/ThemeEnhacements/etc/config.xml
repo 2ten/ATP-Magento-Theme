@@ -61,6 +61,11 @@
       <atp_themeenhacements>
 	<class>Atp_ThemeEnhacements_Model</class>
       </atp_themeenhacements>
+      <sharingtool>
+        <rewrite>
+          <source_buttons>Atp_ThemeEnhacements_Model_AddThis_Buttons</source_buttons>
+        </rewrite>
+      </sharingtool>
     </models>
     <!--
        <helpers>
