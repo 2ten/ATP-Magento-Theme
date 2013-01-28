@@ -9,3 +9,5 @@ modules/template/atp_storeselector app/design/frontend/base/default/template/atp
 modules/skin/atp_storeselector skin/frontend/base/default/atp_storeselector
 modules/Atp_UspsCustoms.xml app/etc/modules/Atp_UspsCustoms.xml
 modules/Atp_Dataflow.xml app/etc/modules/Atp_Dataflow.xml
+modules/Atp_StockFilter.xml app/etc/modules/Atp_StockFilter.xml
+

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Atp_StockFilter>
+      <version>0.0.0.1</version>
+    </Atp_StockFilter>
+  </modules>
+
+
+  <global>
+
+    <models>
+      <atp_stockfilter>
+	<class>Atp_StockFilter_Model</class>
+      </atp_stockfilter>
+    </models>
+
+    <events>
+      <sales_order_save_after>
+	<observers>
+	  <atp_disable_outofstock>
+            <type>singleton</type>
+	    <class>atp_stockfilter/observer</class>
+	    <method>checkStockAndDisable</method>
+	  </atp_disable_outofstock>
+	</observers>
+      </sales_order_save_after>
+    </events>
+
+  </global>
+
+</config>

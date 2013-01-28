@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Atp_StockFilter>
+      <active>true</active>
+      <codepool>local</codepool>
+    </Atp_StockFilter>
+  </modules>
+</config>
