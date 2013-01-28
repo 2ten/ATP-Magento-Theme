@@ -3,7 +3,7 @@
   <modules>
     <Atp_StockFilter>
       <active>true</active>
-      <codepool>local</codepool>
+      <codePool>local</codePool>
     </Atp_StockFilter>
   </modules>
 </config>
