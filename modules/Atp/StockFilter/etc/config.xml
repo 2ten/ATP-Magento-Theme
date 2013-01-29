@@ -17,7 +17,7 @@
         <observers>
           <disable_when_outofstock>
             <class>atp_stockfilter/observer</class>
-            <method>checkStockAndDisable</method>
+            <method>checkStock</method>
           </disable_when_outofstock>
         </observers>
       </sales_order_save_after>
