@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Atp_Hello>
+      <version>0.1.0</version>
+    </Atp_Hello>
+  </modules>
+
+  <global>
+    <models>
+      <atp_hello>
+	<class>Atp_Hello_Model</class>
+      </atp_hello>
+    </models>
+  </global>
+
+
+  <frontend>
+    <routers>
+      <hellow>
+        <use>standard</use>
+        <args>
+          <module>Atp_Hello</module>
+          <frontName>hellow</frontName>
+        </args>
+      </hellow>
+    </routers>
+ </frontend>
+
+</config>

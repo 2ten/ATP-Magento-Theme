@@ -153,5 +153,34 @@
     </reference>
   </page_two_columns_left>
 
+  <catalog_product_view>
+    <update handle="page_one_column" />
+    <remove name="product.info.upsell" />
+    <remove name="html_calendar" />
+    <remove name="catalog.product.related"  />
+    <remove name="product.description" />
+
+    <reference name="footer">
+      <block type="core/text" name="magic-touch">
+        <action method="setText">
+          <text><![CDATA[
+          <script src='//www.magictoolbox.com/mt/4WA7Z9F/magictouch.js'></script>
+          ]]></text>
+        </action>
+      </block>
+    </reference>
+  </catalog_product_view>
+
+  <!-- handle configurable product image selection + image zoom -->
+  <PRODUCT_TYPE_configurable translate="label" module="catalog">
+    <reference name="head">
+      <action method="addItem"><type>skin_js</type><name>js/product-zoom.js</name></action>
+      <action method="addItem"><type>skin_js</type><name>js/product-config.js</name></action>
+    </reference>
+    <reference name="product.info">
+      <action method="unsetChild"><child>product.info.media</child></action>
+      <block type="atp_themeenhacements/configurableProductMedia" name="product.info.media" as="media" template="catalog/product/view/media.phtml"/>
+    </reference>
+  </PRODUCT_TYPE_configurable>
 
 </layout>

@@ -1,13 +1,33 @@
+# theme
 skin skin/frontend/default/atp
 frontend app/design/frontend/default/atp
+
+# local modules
 modules/Atp app/code/local/Atp
+
+# theme overrides
 modules/Atp_ThemeEnhacements.xml app/etc/modules/Atp_ThemeEnhacements.xml
 modules/layout/atp_themeenhacements.xml app/design/frontend/base/default/layout/atp_themeenhacements.xml
+
+# this module is no longer needed
 modules/Atp_StoreSelector.xml app/etc/modules/Atp_StoreSelector.xml
 modules/layout/atp_storeselector.xml app/design/frontend/base/default/layout/atp_storeselector.xml
 modules/template/atp_storeselector app/design/frontend/base/default/template/atp_storeselector
 modules/skin/atp_storeselector skin/frontend/base/default/atp_storeselector
+
+# some rewrites on the USPS's shipping module
 modules/Atp_UspsCustoms.xml app/etc/modules/Atp_UspsCustoms.xml
+
+# was used to generate The Find's feed. No longer needed
+# after Google Bases's feeds get set up
 modules/Atp_Dataflow.xml app/etc/modules/Atp_Dataflow.xml
+
+# handle some stock events for catalog visibility
 modules/Atp_StockFilter.xml app/etc/modules/Atp_StockFilter.xml
+
+# this is a custom catalog listing to display in the Facebook's chrome
+modules/Atp_FacebookTab.xml app/etc/modules/Atp_FacebookTab.xml
+modules/layout/atp_facebooktab.xml app/design/frontend/base/default/layout/atp_facebooktab.xml
+modules/template/atp_facebooktab app/design/frontend/base/default/template/atp_facebooktab
+modules/skin/atp_facebooktab/facebooktab.css skin/frontend/base/default/css/facebooktab.css
 

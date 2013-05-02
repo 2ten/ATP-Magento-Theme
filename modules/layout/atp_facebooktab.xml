@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<layout version="1.0.0">
+  <facebooktab_page>
+    <block type="atp_facebooktab/view" name="facebooktab" template="atp_facebooktab/tab.phtml" output="toHtml">
+      <block type="cms/block" name="facebook.banner" before="-">
+        <action method="setBlockId"><block_id>facebook-banner</block_id></action>
+      </block>
+    </block>
+  </facebooktab_page>
+</layout>

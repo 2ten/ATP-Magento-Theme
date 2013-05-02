@@ -46,8 +46,7 @@
       <catalog>
         <rewrite>
           <product_list>Atp_ThemeEnhacements_Block_ProductList</product_list>
-          <!--
-          <product_view_type_configurable>Atp_ThemeEnhacements_Block_ProductTypeConfigurable</product_view_type_configurable> -->
+          <!--<product_view_type_configurable>Atp_ThemeEnhacements_Block_ProductTypeConfigurable</product_view_type_configurable>-->
         </rewrite>
       </catalog>
       <wishlist>

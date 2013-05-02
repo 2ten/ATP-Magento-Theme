@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Atp_FacebookTab>
+      <version>0.1.0</version>
+    </Atp_FacebookTab>
+  </modules>
+  <global>
+    <blocks>
+      <atp_facebooktab>
+        <class>Atp_FacebookTab_Block</class>
+      </atp_facebooktab>
+    </blocks>
+    <resources>
+      <atp_facebooktab_setup>
+        <setup>
+          <module>Atp_FacebookTab</module>
+        </setup>
+        <connection>
+          <use>core_setup</use>
+        </connection>
+      </atp_facebooktab_setup>
+    </resources>
+  </global>
+
+  <frontend>
+    <product>
+      <collection>
+        <attributes>
+          <facebook_featured />
+        </attributes>
+      </collection>
+    </product>
+    <routers>
+      <facebooktab>
+        <use>standard</use>
+        <args>
+          <module>Atp_FacebookTab</module>
+          <frontName>facebook-listing</frontName>
+        </args>
+      </facebooktab>
+    </routers>
+    <layout>
+      <updates>
+        <facebooktab>
+          <file>atp_facebooktab.xml</file>
+        </facebooktab>
+      </updates>
+    </layout>
+ </frontend>
+</config>
