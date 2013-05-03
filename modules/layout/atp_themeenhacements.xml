@@ -153,22 +153,26 @@
     </reference>
   </page_two_columns_left>
 
-  <catalog_product_view>
-    <update handle="page_one_column" />
-    <remove name="product.info.upsell" />
-    <remove name="html_calendar" />
-    <remove name="catalog.product.related"  />
-    <remove name="product.description" />
-
+  <register_magic_zoom>
     <reference name="footer">
       <block type="core/text" name="magic-touch">
         <action method="setText">
           <text><![CDATA[
-          <script src='//www.magictoolbox.com/mt/4WA7Z9F/magictouch.js'></script>
+          <script src='//www.magictoolbox.com/mt/EG8CGFZ/magictouch.js'></script>
           ]]></text>
         </action>
       </block>
     </reference>
+  </register_magic_zoom>
+
+  <catalog_product_view>
+    <update handle="page_one_column" />
+    <update handle="register_magic_zoom" />
+
+    <remove name="product.info.upsell" />
+    <remove name="html_calendar" />
+    <remove name="catalog.product.related"  />
+    <remove name="product.description" />
   </catalog_product_view>
 
   <!-- handle configurable product image selection + image zoom -->
