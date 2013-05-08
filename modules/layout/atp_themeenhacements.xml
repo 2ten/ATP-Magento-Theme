@@ -40,7 +40,7 @@
     <reference name="content">
       <block type="core/template" name="home_callouts" template="callouts/home.phtml"/>
     </reference>
-  </cms_index_index>A
+  </cms_index_index>
 
   <STORE_jewelry>
     <reference name="header">
@@ -154,7 +154,7 @@
   </page_two_columns_left>
 
   <register_magic_zoom>
-    <reference name="footer">
+    <reference name="content">
       <block type="core/text" name="magic-touch">
         <action method="setText">
           <text><![CDATA[
