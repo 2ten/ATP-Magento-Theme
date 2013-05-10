@@ -1,0 +1,43 @@
+<action type="catalog/convert_adapter_product" method="load">
+    <var name="store"><![CDATA[0]]></var>
+    <var name="filter/type"><![CDATA[simple]]></var>
+    <var name="filter/qty/from"><![CDATA[1]]></var>
+    <var name="filter/qty/to"><![CDATA[1000]]></var>
+    <var name="filter/status"><![CDATA[1]]></var>
+</action>
+
+<action type="catalog/convert_parser_product" method="unparse">
+    <var name="store"><![CDATA[0]]></var>
+    <var name="url_field"><![CDATA[0]]></var>
+</action>
+
+<action type="dataflow/convert_mapper_column" method="map">
+    <var name="map">
+        <map name="sku"><![CDATA[mpn]]></map>
+        <map name="title_thefind"><![CDATA[title]]></map>
+        <map name="description"><![CDATA[description]]></map>
+        <map name="google_category"><![CDATA[google_product_category]]></map>
+        <map name="thefind_category"><![CDATA[product_type]]></map>
+        <map name="google_condition"><![CDATA[condition]]></map>
+        <map name="price"><![CDATA[price]]></map>
+        <map name="brand"><![CDATA[brand]]></map>
+        <map name="google_gender"><![CDATA[gender]]></map>
+        <map name="google_age_group"><![CDATA[age_group]]></map>
+        <map name="weight"><![CDATA[shipping_weight]]></map>
+        <map name="qty"><![CDATA[quantity]]></map>
+        <map name="google_color"><![CDATA[color]]></map>
+    </var>
+    <var name="_only_specified">true</var>
+</action>
+
+<action type="Atp_Dataflow_Model_Convert_Parser_GoogleBaseGeneral" method="unparse">
+    <var name="delimiter"><![CDATA[\t]]></var>
+    <var name="enclose"><![CDATA["]]></var>
+    <var name="fieldnames">true</var>
+</action>
+
+<action type="dataflow/convert_adapter_io" method="save">
+    <var name="type">file</var>
+    <var name="path">var/export</var>
+    <var name="filename"><![CDATA[google_base_feed_general.csv]]></var>
+</action>
