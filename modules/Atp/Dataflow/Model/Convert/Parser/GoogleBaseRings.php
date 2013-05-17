@@ -60,7 +60,7 @@ class Atp_Dataflow_Model_Convert_Parser_GoogleBaseRings extends Atp_Dataflow_Mod
           $attrId = $attribute->getProductAttribute()->getAttributeId();
           $select[$attrId] = $child->getData($attribute->getProductAttribute()->getAttributeCode());
         }
-        $row['item_group_id'] = $confSku;
+        $row['item group id'] = $confSku;
         $row['link'] = $url . '#' . http_build_query($select);
         $csvData = array();
         foreach ($fieldList as $field) {
@@ -78,7 +78,7 @@ class Atp_Dataflow_Model_Convert_Parser_GoogleBaseRings extends Atp_Dataflow_Mod
 
   protected function getAdditionalFields() {
     $fields = parent::getAdditionalFields();
-    $fields['item_group_id'] = 'item_group_id';
+    $fields['item group id'] = 'item group id';
     $fields['size'] = 'size';
     $fields['color'] = 'color';
     return $fields;
@@ -92,14 +92,14 @@ class Atp_Dataflow_Model_Convert_Parser_GoogleBaseRings extends Atp_Dataflow_Mod
     $row['mpn'] = $sku;
     $map = array('title_thefind' => 'title',
                  'description' => 'description',
-                 'google_category' => 'google_product_category',
-                 'thefind_category' => 'product_type',
+                 'google_category' => 'google product category',
+                 'thefind_category' => 'product type',
                  'google_condition' => 'condition',
                  'price' => 'price',
                  'brand' => 'brand',
                  'google_gender' => 'gender',
-                 'google_age_group' => 'age_group',
-                 'weight' => 'shipping_weight',
+                 'google_age_group' => 'age group',
+                 'weight' => 'shipping weight',
                  'tagua_color' => 'color',
                  'ring_size' => 'size'
                  );

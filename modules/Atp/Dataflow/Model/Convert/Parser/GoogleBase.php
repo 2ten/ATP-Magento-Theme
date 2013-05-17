@@ -67,8 +67,8 @@ class Atp_Dataflow_Model_Convert_Parser_GoogleBase extends Mage_Dataflow_Model_C
     $fieldList = array();
     $fieldList['id'] = 'id'; // Product id
     $fieldList['link'] = 'link';
-    $fieldList['image_link'] = 'image_link';
-    $fieldList['additional_image_link'] = 'additional_image_link';
+    $fieldList['image_link'] = 'image link';
+    $fieldList['additional_image_link'] = 'additional image link';
     $fieldList['shipping'] = 'shipping';
     $fieldList['availability'] = 'availability';
     return $fieldList;
@@ -94,7 +94,7 @@ class Atp_Dataflow_Model_Convert_Parser_GoogleBase extends Mage_Dataflow_Model_C
     $product = $this->getProduct($sku, $store, 'sku');
     if ($this->exclude($product)) return null;
     $image_attribute = $product->getResource()->getAttribute('image');
-    $weight = floatval($row['shipping_weight']);
+    $weight = floatval($row['shipping weight']);
 
     if (!$weight || !$image_attribute) return null;
 
@@ -103,16 +103,16 @@ class Atp_Dataflow_Model_Convert_Parser_GoogleBase extends Mage_Dataflow_Model_C
 
     $row['title'] = trim($row['title']);
     $row['id'] = $product->getId();
-    $row['image_link'] = $image_attribute->getFrontend()->getUrl($product);
+    $row['image link'] = $image_attribute->getFrontend()->getUrl($product);
     $row['link'] = $product->getProductUrl();
-    $row['product_type'] = !empty($row['product_type']) ? $row['product_type'] : $this->trailCategories($product, ' / ');
+    $row['product type'] = !empty($row['product type']) ? $row['product type'] : $this->trailCategories($product, ' / ');
     $row['shipping'] = $store == self::STORE_JEWELRY && $weight < self::MAX_FREE_SHIPPING_WEIGHT ? self::FREE_SHIPPING_TEMPLATE : '';
     $row['availability'] = self::IN_STOCK;
     $row['price'] = number_format(floatval($row['price']), 2);
     $qty = isset($row['quantity']) ? floatval($row['quantity']) : $this->getProductStock($product);
     if (!$qty) return null;
     $row['quantity'] = number_format($qty, 2);
-    $row['shipping_weight'] = number_format($weight, 2) . ' lb';
+    $row['shipping weight'] = number_format($weight, 2) . ' lb';
 
     $row['material'] = $this->getProductAttribute($store == self::STORE_JEWELRY ? 'material' : 'pc_ceramic_material', $product, $store);
 
@@ -122,7 +122,7 @@ class Atp_Dataflow_Model_Convert_Parser_GoogleBase extends Mage_Dataflow_Model_C
     foreach ($mediaGallery as $media) {
       $otherImages[] = $media->getUrl();
     }
-    $row['additional_image_link'] = implode(',', $otherImages);
+    $row['additional image link'] = implode(',', $otherImages);
     return $row;
   }
 
