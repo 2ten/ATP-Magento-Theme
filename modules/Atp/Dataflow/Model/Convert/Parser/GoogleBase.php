@@ -67,8 +67,8 @@ class Atp_Dataflow_Model_Convert_Parser_GoogleBase extends Mage_Dataflow_Model_C
     $fieldList = array();
     $fieldList['id'] = 'id'; // Product id
     $fieldList['link'] = 'link';
-    $fieldList['image_link'] = 'image link';
-    $fieldList['additional_image_link'] = 'additional image link';
+    $fieldList['image link'] = 'image link';
+    $fieldList['additional image link'] = 'additional image link';
     $fieldList['shipping'] = 'shipping';
     $fieldList['availability'] = 'availability';
     return $fieldList;
@@ -88,7 +88,7 @@ class Atp_Dataflow_Model_Convert_Parser_GoogleBase extends Mage_Dataflow_Model_C
   protected function processRow($row) {
     $sku = $row['mpn'];
 
-    if (!isset($sku) || !$sku) return null;
+    if (!isset($sku) || !$sku && !$row['condition']) return null;
 
     $store = $this->getStoreBySkuPrefix($sku);
     $product = $this->getProduct($sku, $store, 'sku');
