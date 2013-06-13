@@ -210,7 +210,7 @@ class Atp_UspsCustoms_Model_Shipping_Carrier_Usps extends Mage_Usa_Model_Shippin
             $destCountry = self::USA_COUNTRY_ID;
         }
 
-        if ($store != 'jewelry' || !$this->_isUSCountry($destCountry) || ($request->getPackageWeight() > 0.81)) {
+        if ($store != 'jewelry' || !$this->_isUSCountry($destCountry)) {
           return;
         }
 
